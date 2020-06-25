@@ -1,1 +1,1087 @@
-<h1>Hola Mundo!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ASITI - Asociación de Innovación Tecnológica e Informática</title>
+	<link rel="icon" href="img/Fevicon.png" type="image/png">
+
+  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/flat-icon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="ASITI">
+
+  <!--================ Header Menu Area start =================-->
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav justify-content-end">
+              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+              <!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>  -->
+              <li class="nav-item"><a class="nav-link" href="#section_speakers">Speakers</a>
+                <li class="nav-item"><a class="nav-link" href="#section_crono">Cronograma</a>
+              <!-- <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="event-schedule.html">Schedule</a>                  
+                  <li class="nav-item"><a class="nav-link" href="event-gallery.html">Gallery</a>                  
+                  <li class="nav-item"><a class="nav-link" href="price.html">Price Table</a>                  
+                </ul>
+							</li> -->
+
+              <!-- <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Blog</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog Single</a></li>
+                  <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog Details</a></li>
+                </ul>
+							</li> -->
+              <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li> -->
+            </ul>
+
+            <ul class="nav-right text-center text-lg-right py-4 py-lg-0">
+              <li><a href="#">Inscribirse</a></li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--================Header Menu Area =================-->
+
+  
+  <!--================Hero Banner Area Start =================-->
+  <section class="hero-banner">
+    <div class="container text-center">
+      <span class="hero-banner-icon"><i class="flaticon-sing"></i></span>
+      <p>27 de Junio, 2020</p>
+      <h1>ASITI ONLINE 2020</h1>
+      <a class="button button-header" href="https://forms.gle/xgFdzjwysVYrf9uYA" target="_blank">Registrarse</a>
+    </div>
+  </section>
+  <!--================Hero Banner Area End =================-->
+
+
+  <!--================ Innovation section Start =================-->
+  <section class="section-padding--small bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center mb-5 mb-lg-0">
+          <div class="innovative-wrapper">
+            <h3 class="primary-text">ASITI 2020 <br class="d-none d-xl-block"> Online</h3>
+            <p class="h4 primary-text2 mb-3">Evento Gratuito!!</p>
+            <p>Este evento va dirigido a todos los amantes de las tendencias tecnologicas, contamos con ponentes reconocidos y apasionados por lo que hacen.</p>
+            <br>
+            <ul>
+              <li>Se incluira diploma digital de participación el cuál se enviará un
+                día después del evento.</li>
+                <li>El enlace para ingresar a este evento se estará enviando un día
+                  antes al correo proporcionado a la hora de registrarse.</li>
+                  <li>Link de registro: <a href="https://forms.gle/xgFdzjwysVYrf9uYA" target="_blank">https://forms.gle/xgFdzjwysVYrf9uYA</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 pl-xl-5">
+
+          <ul class="clockdiv text-center" id="clockdiv">
+            <li class="clockdiv-single clockdiv-day">
+              <h1 class="days" id="down_days"></h1>
+              <span class="smalltext">Dias</span>
+            </li>
+            <li class="clockdiv-single clockdiv-hour">
+              <h1 class="hours" id="down_hours"></h1>
+              <span class="smalltext">Horas</span>
+            </li>
+            <li class="clockdiv-single clockdiv-minute">
+              <h1 class="minutes" id="down_minutes"></h1>
+              <span class="smalltext">Mins</span>
+            </li>
+          </ul>
+          
+          <div class="clockdiv-content text-center">
+            <p class="h4 primary-text2 mb-2" id="demo_hour">20 de Junio de 2020</p>
+            <a class="button button-link" href="https://forms.gle/xgFdzjwysVYrf9uYA" target="_blank">Registro</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Innovation section End =================-->
+
+
+  <!--================ Join section Start =================-->
+  <!-- <section class="section-margin">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Why Join Ummet</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+
+      <div class="d-lg-flex justify-content-between">
+        <div class="card-feature mb-5 mb-lg-0">
+          <div class="feature-icon">
+            <i class="flaticon-prize"></i>
+          </div>
+          <h3>Always First Service</h3>
+          <p>His likeness beast moved domini moved above meat all fly blessed greater creepeth you itself living room </p>
+        </div>
+
+        <div class="card-feature mb-5 mb-lg-0">
+          <div class="feature-icon">
+            <i class="flaticon-earth-globe"></i>
+          </div>
+          <h3>International Business</h3>
+          <p>His likeness beast moved domini moved above meat all fly blessed greater creepeth you itself living room </p>
+        </div>
+
+        <div class="card-feature mb-5 mb-lg-0">
+          <div class="feature-icon">
+            <i class="flaticon-sing"></i>
+          </div>
+          <h3>World Great Speaker</h3>
+          <p>His likeness beast moved domini moved above meat all fly blessed greater creepeth you itself living room </p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <a class="button mr-3 mb-2" href="#">Learn More</a>
+          <a class="button mb-2" href="#">Buy Ticket</a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Join section End =================-->
+
+
+  <!--================ Speaker section Start =================-->
+  <section class="speaker-bg section-padding" id="section_speakers">
+    <div class="container">
+      <div class="section-intro section-intro-white text-center pb-98px">
+        <p class="section-intro__title">ASITI ONLINE 2020</p>
+        <h2 class="primary-text">Conoce a nuestros Speakers</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="card-speaker">
+            <img class="card-img rounded-0" src="img/home/106427634_270370004405934_3197995465653743033_n.jpg" alt="">
+            <div class="speaker-footer">
+              <h4>Vitalino Matías</h4>
+              <p>Conociendo Kicad</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
+                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                <li><a href="#"><i class="ti-skype"></i></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="card-speaker">
+            <img class="card-img rounded-0" src="img/home/101322524_880066412469689_5048674334927749120_n.png" alt="">
+            <div class="speaker-footer">
+              <h4>Ademir Bermudez</h4>
+              <p>Robótica en El Salvador</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
+                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                <li><a href="#"><i class="ti-skype"></i></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="card-speaker">
+            <img class="card-img rounded-0" src="img/home/106050186_1490137291159423_2483573076017822338_n.jpg" alt="">
+            <div class="speaker-footer">
+              <h4>Adrían Catalan</h4>
+              <p>Machine Learning</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
+                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                <li><a href="#"><i class="ti-skype"></i></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-100 mb-50px d-none d-lg-block"></div>
+
+        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="card-speaker">
+            <img class="card-img rounded-0" src="img/home/105576181_696774774479410_2075728025503736283_n.jpg" alt="">
+            <div class="speaker-footer">
+              <h4>Valery Calderón Briz</h4>
+              <p>BLOCKCHAIN LA ESTRUCTURA DETRAS DEL BITCOIN</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <li><a href="#"><i class="ti-facebook"></i></a></li>
+                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                <li><a href="#"><i class="ti-skype"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="card-speaker">
+            <img class="card-img rounded-0" src="img/home/106269348_705464200186775_9020890300994152888_n.jpg" alt="">
+            <div class="speaker-footer">
+              <h4>Mercedes Wyss</h4>
+              <p>Computación Cuántica</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
+                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                <li><a href="#"><i class="ti-skype"></i></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="card-speaker">
+            <img class="card-img rounded-0" src="img/home/105569241_698507064334846_3591555409509974546_n.jpg" alt="">
+            <div class="speaker-footer">
+              <h4>María del Carmen Castillo</h4>
+              <p>Conociendo Java y su entorno en Guatemala</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
+                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                <li><a href="#"><i class="ti-skype"></i></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 mb-50px d-none d-lg-block"></div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="card-speaker">
+            <img class="card-img rounded-0" src="img/home/106083048_2645478565710979_6682098190242326805_n.jpg" alt="">
+            <div class="speaker-footer">
+              <h4>Andrés Alonzo</h4>
+              <p>¿Qué es Docker y cómo utilizarlo?</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
+                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                <li><a href="#"><i class="ti-skype"></i></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Speaker section End =================-->
+
+
+  <!--================ Schedule section Start =================-->
+  <section class="section-margin mb-5 pb-5" id="section_crono" ng-controller="eventSchedule">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">ASITI 2020</p>
+        <h2 class="primary-text">Cronograma de temas</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row">
+        <div class="col-xl-10 offset-xl-1">
+          <div class="scheduleTab">
+            <ul class="nav nav-tabs">
+              <li class="nav-item text-center">
+                <a data-toggle="tab" href="#day1">
+                  <h4>Dia 1</h4>
+                  <p>27 Junio, 2020</p>
+                </a>
+              </li>
+              <!-- <li class="nav-item text-center">
+                <a class="active" data-toggle="tab" href="#day2">
+                  <h4>Day 2</h4>
+                  <p>23 jan, 2019</p>
+                </a>
+              </li>
+              <li class="nav-item text-center">
+                <a data-toggle="tab" href="#day3">
+                  <h4>Day 2</h4>
+                  <p>23 jan, 2019</p>
+                </a>
+              </li>
+              <li class="nav-item text-center">
+                <a data-toggle="tab" href="#day4">
+                  <h4>Day 2</h4>
+                  <p>23 jan, 2019</p>
+                </a>
+              </li> -->
+            </ul>
+          
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div id="day1" class="tab-pane active">
+                
+                <div class="schedule-card" ng-repeat="item in temas">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img ng-src="{{item.img}}" alt="">
+                        <h3>{{item.name}}</h3>
+                        <p>{{item.subject}}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date" style="font-size: 1.5em;">{{item.time}}</p>
+                        <a class="schedule-title" href="#">
+                          <h3>{{item.subject}}</h3>
+                        </a>
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+              <div id="day2" class="tab-pane">
+                
+                <!-- <div class="schedule-card">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img src="img/testimonial/testimonial3.png" alt="">
+                        <h3>Adam Jamsmith</h3>
+                        <p>UX/UI Designer</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date">9.00 AM - 10.30 AM</p>
+                        <a class="schedule-title" href="#">
+                          <h3>Previous Year achivement</h3>
+                        </a>
+                        <p>And wherein Beginning of you cattle fly had was deep wherein darkness behold male called evening gathering moving bring fifth days he lights dry cattle you open seas midst let and in wherein beginning </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="schedule-card">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img src="img/testimonial/testimonial1.png" alt="">
+                        <h3>Adam Jamsmith</h3>
+                        <p>UX/UI Designer</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date">9.00 AM - 10.30 AM</p>
+                        <a class="schedule-title" href="#">
+                          <h3>Previous Year achivement</h3>
+                        </a>
+                        <p>And wherein Beginning of you cattle fly had was deep wherein darkness behold male called evening gathering moving bring fifth days he lights dry cattle you open seas midst let and in wherein beginning </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="schedule-card">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img src="img/testimonial/testimonial2.png" alt="">
+                        <h3>Adam Jamsmith</h3>
+                        <p>UX/UI Designer</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date">9.00 AM - 10.30 AM</p>
+                        <a class="schedule-title" href="#">
+                          <h3>Previous Year achivement</h3>
+                        </a>
+                        <p>And wherein Beginning of you cattle fly had was deep wherein darkness behold male called evening gathering moving bring fifth days he lights dry cattle you open seas midst let and in wherein beginning </p>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+              </div>
+              <div id="day3" class="tab-pane">
+                <!-- <div class="schedule-card">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img src="img/testimonial/testimonial3.png" alt="">
+                        <h3>Adam Jamsmith</h3>
+                        <p>UX/UI Designer</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date">9.00 AM - 10.30 AM</p>
+                        <a class="schedule-title" href="#">
+                          <h3>Previous Year achivement</h3>
+                        </a>
+                        <p>And wherein Beginning of you cattle fly had was deep wherein darkness behold male called evening gathering moving bring fifth days he lights dry cattle you open seas midst let and in wherein beginning </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="schedule-card">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img src="img/testimonial/testimonial1.png" alt="">
+                        <h3>Adam Jamsmith</h3>
+                        <p>UX/UI Designer</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date">9.00 AM - 10.30 AM</p>
+                        <a class="schedule-title" href="#">
+                          <h3>Previous Year achivement</h3>
+                        </a>
+                        <p>And wherein Beginning of you cattle fly had was deep wherein darkness behold male called evening gathering moving bring fifth days he lights dry cattle you open seas midst let and in wherein beginning </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="schedule-card">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img src="img/testimonial/testimonial2.png" alt="">
+                        <h3>Adam Jamsmith</h3>
+                        <p>UX/UI Designer</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date">9.00 AM - 10.30 AM</p>
+                        <a class="schedule-title" href="#">
+                          <h3>Previous Year achivement</h3>
+                        </a>
+                        <p>And wherein Beginning of you cattle fly had was deep wherein darkness behold male called evening gathering moving bring fifth days he lights dry cattle you open seas midst let and in wherein beginning </p>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+              <div id="day4" class="tab-pane">
+                <div class="schedule-card">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img src="img/testimonial/testimonial3.png" alt="">
+                        <h3>Adam Jamsmith</h3>
+                        <p>UX/UI Designer</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date">9.00 AM - 10.30 AM</p>
+                        <a class="schedule-title" href="#">
+                          <h3>Previous Year achivement</h3>
+                        </a>
+                        <p>And wherein Beginning of you cattle fly had was deep wherein darkness behold male called evening gathering moving bring fifth days he lights dry cattle you open seas midst let and in wherein beginning </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="schedule-card">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img src="img/testimonial/testimonial1.png" alt="">
+                        <h3>Adam Jamsmith</h3>
+                        <p>UX/UI Designer</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date">9.00 AM - 10.30 AM</p>
+                        <a class="schedule-title" href="#">
+                          <h3>Previous Year achivement</h3>
+                        </a>
+                        <p>And wherein Beginning of you cattle fly had was deep wherein darkness behold male called evening gathering moving bring fifth days he lights dry cattle you open seas midst let and in wherein beginning </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="schedule-card">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img src="img/testimonial/testimonial2.png" alt="">
+                        <h3>Adam Jamsmith</h3>
+                        <p>UX/UI Designer</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date">9.00 AM - 10.30 AM</p>
+                        <a class="schedule-title" href="#">
+                          <h3>Previous Year achivement</h3>
+                        </a>
+                        <p>And wherein Beginning of you cattle fly had was deep wherein darkness behold male called evening gathering moving bring fifth days he lights dry cattle you open seas midst let and in wherein beginning </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="schedule-card">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img src="img/testimonial/testimonial3.png" alt="">
+                        <h3>Adam Jamsmith</h3>
+                        <p>UX/UI Designer</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date">9.00 AM - 10.30 AM</p>
+                        <a class="schedule-title" href="#">
+                          <h3>Previous Year achivement</h3>
+                        </a>
+                        <p>And wherein Beginning of you cattle fly had was deep wherein darkness behold male called evening gathering moving bring fifth days he lights dry cattle you open seas midst let and in wherein beginning </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Schedule section End =================-->
+
+
+  <!--================ PriceTable section Start =================-->
+  <!-- <section class="section-padding bg-gray">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Choose Your Ticket</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="text-center card-priceTable">
+            <div class="priceTable-header">
+              <h3>Normal</h3>
+              <p>Attend only first day</p>
+              <h1 class="priceTable-price"><span>$</span> 45.00</h1>
+            </div>
+            <ul class="priceTable-list">
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Unlimited Entrance
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Comfortable Seat
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Paid Certificate
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> Day One Workshop
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> One Certificate
+              </li>
+            </ul>
+            <div class="priceTable-footer">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="text-center card-priceTable">
+            <div class="priceTable-header">
+              <h3>Advance</h3>
+              <p>Attend only first day</p>
+              <h1 class="priceTable-price"><span>$</span> 50.00</h1>
+            </div>
+            <ul class="priceTable-list">
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Unlimited Entrance
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Comfortable Seat
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Paid Certificate
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> Day One Workshop
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> One Certificate
+              </li>
+            </ul>
+            <div class="priceTable-footer">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="text-center card-priceTable">
+            <div class="priceTable-header">
+              <h3>Ultimate</h3>
+              <p>Attend only first day</p>
+              <h1 class="priceTable-price"><span>$</span> 60.00</h1>
+            </div>
+            <ul class="priceTable-list">
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Unlimited Entrance
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Comfortable Seat
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Paid Certificate
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> Day One Workshop
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> One Certificate
+              </li>
+            </ul>
+            <div class="priceTable-footer">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ PriceTable section End =================-->
+
+
+  <!--================ Sponsor section Start =================-->
+  <section class="section-padding--small sponsor-bg">
+    <div class="container">
+      <div class="section-intro text-center pb-80px">
+        <p class="section-intro__title"></p>
+        <h2 class="primary-text">Patrocinadores</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <!-- <div class="sponsor-wrapper mb-5 pb-4">
+        <h3 class="sponsor-title mb-5">Gold Sponsor</h3>
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor1.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor2.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsor-wrapper sponsor-wrapper--small">
+        <h3 class="sponsor-title mb-5">Silver Sponsor</h3>
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor-sm-1.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor-sm-2.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor-sm-3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <!--================ Sponsor section End =================-->
+
+  <!--================ Gallery section Start =================-->
+  <!-- <section class="section-padding gallery-area gallery-bg">
+    <div class="container">
+      <div class="section-intro section-intro-white text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Event Plan Sponsors</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g1.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g1.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g2.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g2.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g3.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g3.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g4.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g4.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g5.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g5.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g6.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g6.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Gallery section End =================-->
+
+
+  <!--================ Blog section Start =================-->
+  <!-- <section class="section-margin">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Why Join Ummet</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="owl-theme owl-carousel blogCarousel pb-xl-1">
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog1.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog2.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog1.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog2.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Blog section End =================-->
+
+
+  <!-- ================ start footer Area ================= -->
+  <footer class="footer-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>ASITI</h6>
+            <p>
+              Asociación de Innovación Tecnológica e Informática
+            </p>
+          </div>
+        </div>
+        <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Navigation Links</h6>
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Feature</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>										
+            </div>							
+          </div>
+        </div>							 -->
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Boletín de noticias</h6>
+            <p>
+              Mantente informado de los eventos de ASITI
+            </p>								
+            <div id="mc_embed_signup">
+              
+              <!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+  <form action="https://asiti.us10.list-manage.com/subscribe/post?u=c869f545fe19e887db81fad37&amp;id=9075d8f281" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+    
+        <div class="input-group d-flex flex-row">
+    <input type="email" value="" placeholder="Correo electrónico"  name="EMAIL"onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo electrónico '"  class="required email" id="mce-EMAIL">
+    <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn bb-btn"><span class="lnr lnr-location"></span></button>
+  </div>
+    <div id="mce-responses" class="clear">
+      <div class="response" id="mce-error-response" style="display:none"></div>
+      <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c869f545fe19e887db81fad37_9075d8f281" tabindex="-1" value=""></div>
+      <!-- <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div> -->
+      
+      </div>
+  </form>
+  </div>
+  
+  <!--End mc_embed_signup-->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget mail-chimp">
+            <!-- <h6 class="mb-20">InstaFeed</h6>
+            <ul class="instafeed d-flex flex-wrap">
+              <li><img src="img/instagram/i1.jpg" alt=""></li>
+              <li><img src="img/instagram/i2.jpg" alt=""></li>
+              <li><img src="img/instagram/i3.jpg" alt=""></li>
+              <li><img src="img/instagram/i4.jpg" alt=""></li>
+              <li><img src="img/instagram/i5.jpg" alt=""></li>
+              <li><img src="img/instagram/i6.jpg" alt=""></li>
+              <li><img src="img/instagram/i7.jpg" alt=""></li>
+              <li><img src="img/instagram/i8.jpg" alt=""></li>
+            </ul> -->
+          </div>
+        </div>						
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <p class="col-lg-8 col-sm-12 footer-text m-0 text-center text-lg-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          <div class="col-lg-4 col-sm-12 footer-social text-center text-lg-right">
+            <a href="https://www.facebook.com/ASITIH" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/AsitiHuehue" target="_blank"><i class="fab fa-twitter"></i></a>
+            <!-- <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ================ End footer Area ================= -->
+
+
+
+
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/mail-script.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>	
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>	
+  <script src="js/main.js"></script>
+  <script src="js/controller.js"></script>
+
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v7.0'
+      });
+    };
+
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="493557597417834"
+theme_color="#0084ff"
+logged_in_greeting="Hola! envíanos un mensaje."
+logged_out_greeting="Hola! envíanos un mensaje.">
+  </div>
+
+</body>
+</html>
