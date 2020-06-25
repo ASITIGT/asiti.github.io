@@ -1,0 +1,13 @@
+---
+title: ASITI GT
+timezone: America/Guatemala
+collections:
+  eventos:
+    title: Eventos
+    output: true
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
