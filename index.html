@@ -357,7 +357,7 @@
             <div class="tab-content">
               <div id="day1" class="tab-pane active">
                 
-                <div class="schedule-card" ng-repeat="item in temas">
+                <div class="schedule-card" ng-repeat="item in temas | orderBy: 'time'">
                   <div class="row no-gutters">
                     <div class="col-md-3">
                       <div class="card-identity">
