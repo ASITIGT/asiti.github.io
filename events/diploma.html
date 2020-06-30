@@ -87,7 +87,7 @@
           <input type="text" ng-model="user_code" class="form-control" id="exampleInputCode1" placeholder="Código del evento">
           <small id="emailHelp"  class="form-text text-muted text-white" style="color:white">Este código fue enviado a tu correo electrónico.</small>
         </div>
-        <button class="btn btn-primary" ng-click="buscarDiploma()">Buscar Diploma</button>
+        <button class="btn btn-primary" ng-click="buscarDiploma()" onclick="ga('send', 'event', 'diploma', 'generar', '{{user_email}}');">Buscar Diploma</button>
       </form>
       <br>
       <pre ng-show="has_hash" style="color:white">
@@ -251,6 +251,16 @@ theme_color="#0084ff"
 logged_in_greeting="Hola! envíanos un mensaje."
 logged_out_greeting="Hola! envíanos un mensaje.">
   </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150062837-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150062837-1');
+</script>
+
 
 </body>
 </html>
