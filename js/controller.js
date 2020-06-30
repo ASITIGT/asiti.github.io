@@ -626,7 +626,7 @@ $scope.buscarDiploma = function(){
       }
     }else{
       $scope.has_diploma = true;
-      $scope.diploma_url = `http://localhost:8080/events/asiti2020/${$scope.hash}.pdf`
+      $scope.diploma_url = `/events/asiti2020/${$scope.hash}.pdf`
     }
   }else{
     $scope.hash_data = {
