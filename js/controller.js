@@ -619,6 +619,7 @@ $scope.buscarDiploma = function(){
     console.log($scope.hash)
     $scope.hash_data = $scope.asistentes.find(el => el.hash === $scope.hash)
     if(!$scope.hash_data){
+        ga('send', 'event', 'diploma', 'generar-fail-email', $scope.user_email)
       // $scope.has_hash = false;
       $scope.hash_data = {
         'name': 'No registrado',
@@ -630,6 +631,7 @@ $scope.buscarDiploma = function(){
       $scope.diploma_url = `/events/asiti2020/${$scope.hash}.pdf`
     }
   }else{
+    ga('send', 'event', 'diploma', 'generar-fail-code', $scope.user_code)
     $scope.hash_data = {
       'name': 'Código invalido',
       'hash': 'Código invalido',
