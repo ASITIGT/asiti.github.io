@@ -613,6 +613,7 @@ if($scope.hash.length > 0 ){
 
 $scope.buscarDiploma = function(){
   $scope.has_hash = true;
+  ga('send', 'event', 'diploma', 'generar', $scope.user_email)
   if($scope.user_code == 'ASITI2020'){
     $scope.hash = CryptoJS.MD5($scope.user_email).toString();
     console.log($scope.hash)
