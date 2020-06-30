@@ -1,6 +1,6 @@
 var app = angular.module("ASITI", []);
 
-app.controller("asiti2020", function($scope) {
+app.controller("asiti2020", function($scope,$http) {
   $scope.hash = window.location.hash.substr(1);
   
   $scope.asistentes = [
@@ -609,6 +609,33 @@ if($scope.hash.length > 0 ){
       'temas': ["Invalido"]
     }
   }
+}
+
+$scope.buscarDiploma = function(){
+  $scope.has_hash = true;
+  if($scope.user_code == 'ASITI2020'){
+    $scope.hash = CryptoJS.MD5($scope.user_email).toString();
+    console.log($scope.hash)
+    $scope.hash_data = $scope.asistentes.find(el => el.hash === $scope.hash)
+    if(!$scope.hash_data){
+      // $scope.has_hash = false;
+      $scope.hash_data = {
+        'name': 'No registrado',
+        'hash': 'No registrado',
+        'temas': []
+      }
+    }else{
+      $scope.has_diploma = true;
+      $scope.diploma_url = `http://localhost:8080/events/asiti2020/${$scope.hash}.pdf`
+    }
+  }else{
+    $scope.hash_data = {
+      'name': 'Código invalido',
+      'hash': 'Código invalido',
+      'temas': []
+    }
+  }
+  
 }
 })
 
