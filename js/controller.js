@@ -606,7 +606,7 @@ app.controller("asiti2020", function($scope,$http) {
     },
     {
         "hash": "c6f128421ef52c06ece9537649b29e30",
-        "name": "German Colop",
+        "name": "German Noé Colop Juárez",
         "temas": [
             "Computaci\u00f3n cu\u00e1ntica"
         ]
