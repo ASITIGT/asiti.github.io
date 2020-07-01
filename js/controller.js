@@ -603,6 +603,13 @@ app.controller("asiti2020", function($scope,$http) {
             "Rob\u00f3tica en el salvador",
             "Conociendo kicad"
         ]
+    },
+    {
+        "hash": "c6f128421ef52c06ece9537649b29e30",
+        "name": "German Colop",
+        "temas": [
+            "Computaci\u00f3n cu\u00e1ntica"
+        ]
     }
 ];
 if($scope.hash.length > 0 ){
