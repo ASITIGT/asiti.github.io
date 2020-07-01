@@ -64,7 +64,11 @@ app.controller("asiti2020", function($scope,$http) {
         "temas": [
             "Conociendo java y su entorno en guatemala",
             "Rob\u00f3tica en el salvador",
-            "Computaci\u00f3n cu\u00e1ntica"
+            "Computaci\u00f3n cu\u00e1ntica",
+            "Conociendo kicad",
+            "Blockchain la estructura detras del bitcoin",
+            "\u00bfqu\u00e9 es docker y c\u00f3mo utilizarlo?",
+            "Machine learning"
         ]
     },
     {
@@ -255,12 +259,25 @@ app.controller("asiti2020", function($scope,$http) {
         "name": "Jeffersson Antonio Chaper\u00f3n Urizar",
         "temas": [
             "Conociendo java y su entorno en guatemala",
-            "Robótica en El Salvador",
-            "Computación Cuántica",
-            "¿Qué es Docker y cómo utilizarlo?",
-            "BLOCKCHAIN LA ESTRUCTURA DETRAS DEL BITCOIN",
-            "Machine Learning",
-            "Conociendo Kicad"
+            "Rob\u00f3tica en el salvador",
+            "Computaci\u00f3n cu\u00e1ntica",
+            "\u00bfqu\u00e9 es docker y c\u00f3mo utilizarlo?",
+            "Blockchain la estructura detras del bitcoin",
+            "Machine learning",
+            "Conociendo kicad"
+        ]
+    },
+    {
+        "hash": "6a11a5e8685ed6b9a87b9eb34af7e464",
+        "name": "Delmar Ismael Sac Tuj",
+        "temas": [
+            "Conociendo java y su entorno en guatemala",
+            "Rob\u00f3tica en el salvador",
+            "Computaci\u00f3n cu\u00e1ntica",
+            "\u00bfqu\u00e9 es docker y c\u00f3mo utilizarlo?",
+            "Blockchain la estructura detras del bitcoin",
+            "Machine learning",
+            "Conociendo kicad"
         ]
     },
     {
@@ -606,9 +623,66 @@ app.controller("asiti2020", function($scope,$http) {
     },
     {
         "hash": "c6f128421ef52c06ece9537649b29e30",
-        "name": "German Noé Colop Juárez",
+        "name": "German No\u00e9 Colop Ju\u00e1rez",
         "temas": [
             "Computaci\u00f3n cu\u00e1ntica"
+        ]
+    },
+    {
+        "hash": "02ad0969cb6cbfdd9ad740d430d764ae",
+        "name": "Rogelio Orlando Saquic Poroj",
+        "temas": [
+            "\u00bfqu\u00e9 es docker y c\u00f3mo utilizarlo?",
+            "Blockchain la estructura detras del bitcoin",
+            "Machine learning",
+            "Conociendo kicad"
+        ]
+    },
+    {
+        "hash": "c082ebd7190181abafe4874c61eacdf9",
+        "name": "David Marroqu\u00edn",
+        "temas": [
+            "Conociendo java y su entorno en guatemala",
+            "Machine learning"
+        ]
+    },
+    {
+        "hash": "e988b29f870154b9ab5245a15c4df105",
+        "name": "Esvia Janeth Chilin Sandoval",
+        "temas": [
+            "Conociendo java y su entorno en guatemala",
+            "Rob\u00f3tica en el salvador",
+            "Computaci\u00f3n cu\u00e1ntica",
+            "Conociendo kicad",
+            "Blockchain la estructura detras del bitcoin",
+            "\u00bfqu\u00e9 es docker y c\u00f3mo utilizarlo?",
+            "Machine learning"
+        ]
+    },
+    {
+        "hash": "6bc9a85628b62fad98a60487d2781987",
+        "name": "Jos\u00e9 Antonio Ortiz Corzo",
+        "temas": [
+            "Conociendo java y su entorno en guatemala",
+            "Rob\u00f3tica en el salvador",
+            "Computaci\u00f3n cu\u00e1ntica",
+            "Conociendo kicad",
+            "Blockchain la estructura detras del bitcoin",
+            "\u00bfqu\u00e9 es docker y c\u00f3mo utilizarlo?",
+            "Machine learning"
+        ]
+    },
+    {
+        "hash": "bd718b90f965c6bc7940d8e83648b151",
+        "name": "Luis Alberto Orozco Martin",
+        "temas": [
+            "Conociendo java y su entorno en guatemala",
+            "Rob\u00f3tica en el salvador",
+            "Computaci\u00f3n cu\u00e1ntica",
+            "Conociendo kicad",
+            "Blockchain la estructura detras del bitcoin",
+            "\u00bfqu\u00e9 es docker y c\u00f3mo utilizarlo?",
+            "Machine learning"
         ]
     }
 ];
