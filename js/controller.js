@@ -459,8 +459,13 @@ app.controller("asiti2020", function($scope,$http) {
         "hash": "eab45fef859e4d5dc2074c6ae78574de",
         "name": "Pascual Hern\u00e1ndez P\u00e9rez",
         "temas": [
+            "Conociendo java y su entorno en guatemala",
             "Rob\u00f3tica en el salvador",
-            "Conociendo java y su entorno en guatemala"
+            "Computaci\u00f3n cu\u00e1ntica",
+            "Conociendo kicad",
+            "Blockchain la estructura detras del bitcoin",
+            "\u00bfqu\u00e9 es docker y c\u00f3mo utilizarlo?",
+            "Machine learning"
         ]
     },
     {
