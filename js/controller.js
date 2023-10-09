@@ -1,5 +1,161 @@
 var app = angular.module("ASITI", []);
 
+app.controller("asiti2023", function($scope,$http) {
+    $scope.hash = window.location.hash.substr(1);
+    
+    $scope.asistentes = [
+        {
+            "hash": "41766c234eda8ea27f000be328ca2cf9",
+            "name": "Jhonnatan Antulio Alvarado Granados",
+            "temas": []
+        },
+        {
+            "hash": "0aeafc7ea6e471cc44a4830630ee8cbc",
+            "name": "Daniel Cristobal Gonzalez Cobox",
+            "temas": []
+        },
+        {
+            "hash": "a1cf26dfc452856021c70544636f16a0",
+            "name": "Anthony Brandon Alvarado Villatoro",
+            "temas": []
+        },
+        {
+            "hash": "45fce7cdf53a9bfe338d3e4c3bf16c69",
+            "name": "Antony Emanuel Castro Hernández",
+            "temas": []
+        },
+        {
+            "hash": "9d7176797412b86338e3dcabae0ca54a",
+            "name": "Gustavo Angel Ajanel Díaz",
+            "temas": []
+        },
+        {
+            "hash": "3c1d8e7f44895d535775a59dda91b360",
+            "name": "Kevin Ismael Xutuc López",
+            "temas": []
+        },
+        {
+            "hash": "5fd30b2c932428bef92ac7b27f1cbaa9",
+            "name": "Deny Josué Martínez Lucas",
+            "temas": []
+        },
+        {
+            "hash": "f44bf691c1eec414fd53a281786206a8",
+            "name": "Marlon Aaron Súchite Mazariegos",
+            "temas": []
+        },
+        {
+            "hash": "daab71bfc8ebffd78fc84599d87983e9",
+            "name": "Jorge Luis Funes Vásquez",
+            "temas": []
+        },
+        {
+            "hash": "97dacd55d434e4716c63ccf4189c43e2",
+            "name": "Andrés Orlando López García",
+            "temas": []
+        },
+        {
+            "hash": "8a41498c82127dcbaf1f2e7cdede785f",
+            "name": "Miguel Angel Escalante Pérez",
+            "temas": []
+        },
+        {
+            "hash": "46c8ec48f54784e627a441ad3352bcb8",
+            "name": "Bryan Yuvini Samayoa López",
+            "temas": []
+        },
+        {
+            "hash": "3be349ca74be99b80f827976c775e5ae",
+            "name": "Juan Daniel Juan Antonio",
+            "temas": []
+        },
+        {
+            "hash": "616e6132157f3bfd57674a13ed8f3499",
+            "name": "Carlos Eduardo García Cano",
+            "temas": []
+        },
+        {
+            "hash": "ee45b3cfcd1dab903a92eb231ae75351",
+            "name": "Betzaida Janely Martínez López",
+            "temas": []
+        },
+        {
+            "hash": "e92591da2bbd06d604e75a83b12413ea",
+            "name": "Carlos Fernando galicia gomez",
+            "temas": []
+        },
+        {
+            "hash": "e82b56c6aeaa9bb69a3626464bbfb015",
+            "name": "Luis Pedro Jut Sánchez",
+            "temas": []
+        },
+        {
+            "hash": "2f5694d29b5aeda4e4de50d0bb81a324",
+            "name": "Allan Rafael Alvarado Torres",
+            "temas": []
+        },
+        {
+            "hash": "6ad8e6b769f9d5443c41ff6273521a2e",
+            "name": "José Guillermo de Jesus Ovalle Maldonado",
+            "temas": []
+        },
+        {
+            "hash": "93dc32992c24570cfac628883138bcdd",
+            "name": "Suleidy Yajaira Andrés López",
+            "temas": []
+        },
+        {
+            "hash": "f03c4a48f0e68466c1e18ce805d026e7",
+            "name": "Ervin Lorenzo Santana Ordoñez Martinez",
+            "temas": []
+        }
+    ]
+    ;
+  if($scope.hash.length > 0 ){
+    $scope.has_hash = true;
+    $scope.hash_data = $scope.asistentes.find(el => el.hash === $scope.hash)
+    if(!$scope.hash_data){
+      $scope.hash_data = {
+        'name': 'Invalido',
+        'hash': 'Invalido',
+        'temas': ["Invalido"]
+      }
+    }
+  }
+  
+  $scope.buscarDiploma = function(){
+    $scope.has_hash = true;
+    ga('send', 'event', 'diploma', 'generar', $scope.user_email)
+    if($scope.user_code == 'ASITI2023'){
+      // lower email
+      $scope.user_email = $scope.user_email.toLowerCase(); 
+      $scope.hash = CryptoJS.MD5($scope.user_email).toString();
+      console.log($scope.hash)
+      $scope.hash_data = $scope.asistentes.find(el => el.hash === $scope.hash)
+      if(!$scope.hash_data){
+          ga('send', 'event', 'diploma', 'generar-fail-email', $scope.user_email)
+        // $scope.has_hash = false;
+        $scope.hash_data = {
+          'name': 'No registrado',
+          'hash': 'No registrado',
+          'temas': []
+        }
+      }else{
+        $scope.has_diploma = true;
+        $scope.diploma_url = `/events/asiti2023/pdf/${$scope.hash}.pdf`
+      }
+    }else{
+      ga('send', 'event', 'diploma', 'generar-fail-code', $scope.user_code)
+      $scope.hash_data = {
+        'name': 'Código invalido',
+        'hash': 'Código invalido',
+        'temas': []
+      }
+    }
+    
+  }
+  })
+
 app.controller("asiti2020", function($scope,$http) {
   $scope.hash = window.location.hash.substr(1);
   
