@@ -71,7 +71,7 @@
 
   <section class="hero-banner hero-banner-sm" style="padding-top: 50px;" ng-show="!hash">
     <div class="container text-center justify-content-center text-white">
-      <h2>ASITI ONLINE 2023</h2>
+      <h2>ASITI 2023</h2>
       <h4 style="color:white;">Obtener diploma de participación</h4>
       <p style="color:white">Para obtener tu diploma de participación ingresa tu correo electrónico y el código del evento enviado a tu correo, si los datos son válidos aparecerá un boton verde para poder descargar tu diploma.</p>
       <form style="color:white; margin: auto;" class="justify-content-center text-white col-md-6 col-sm-12">
@@ -106,6 +106,8 @@ Nombre: {{hash_data.name}}
 HASH: {{hash}}
 Nombre: {{hash_data.name}}
       </pre>
+
+      <a ng-show="has_diploma" class="btn btn-danger" href="{{diploma_url}}" download="diploma-ASITI2023.pdf">Descargar Diploma</a>
     </div>
   </section>
   <!--================Hero Banner Area End =================-->
