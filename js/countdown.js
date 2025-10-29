@@ -42,5 +42,5 @@ function initializeClock(id, endtime) {
 }
 
 
-var deadline = new Date("Sep 24, 2023 09:00:00").getTime();
+var deadline = new Date("Nov 16, 2025 09:00:00").getTime();
 initializeClock('clockdiv', deadline);
