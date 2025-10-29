@@ -17,6 +17,52 @@
   <link rel="stylesheet" href="vendors/flat-icon/font/flaticon.css">
 
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Estilos personalizados para redes sociales -->
+  <style>
+    .social-media .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white !important;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      color: white !important;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .social-links {
+        gap: 10px;
+      }
+      .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body ng-app="ASITI">
 
@@ -79,6 +125,28 @@
       <h1>CONGRESO ONLINE DE TECNOLOGÍA Y SEGURIDAD INFORMÁTICA</h1>
       <p>📌 Modalidad: Online</p>
       <a class="button button-header mt-4" href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank">Inscríbete al Evento</a>
+      
+      <!-- Redes Sociales -->
+      <div class="social-media mt-4">
+        <p class="text-white mb-3">Síguenos en nuestras redes sociales:</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/ASITIH" target="_blank" class="social-link mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/AsitiHuehue" target="_blank" class="social-link mx-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/asitihuehue7/" target="_blank" class="social-link mx-2">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@asitihuehuetenango1524/streams" target="_blank" class="social-link mx-2">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/asitihuehue/" target="_blank" class="social-link mx-2">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
   <!--================Hero Banner Area End =================-->
@@ -907,9 +975,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           <div class="col-lg-4 col-sm-12 footer-social text-center text-lg-right">
             <a href="https://www.facebook.com/ASITIH" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/AsitiHuehue" target="_blank"><i class="fab fa-twitter"></i></a>
-            <!-- <a href="#"><i class="fab fa-dribbble"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a> -->
+            <a href="https://x.com/AsitiHuehue" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/asitihuehue7/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@asitihuehuetenango1524/streams" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/asitihuehue/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
