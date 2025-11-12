@@ -62,6 +62,50 @@
         font-size: 16px;
       }
     }
+    
+    /* Estilos para modal de speakers */
+    .speaker-modal .modal-content {
+      border-radius: 15px;
+      border: none;
+    }
+    
+    .speaker-modal .modal-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 15px 15px 0 0;
+      border: none;
+      padding: 20px 30px;
+    }
+    
+    .speaker-modal .modal-body {
+      padding: 30px;
+    }
+    
+    .speaker-modal .speaker-info-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #667eea;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    
+    .speaker-modal .speaker-detail h5 {
+      color: #667eea;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .card-speaker {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .card-speaker:hover {
+      transform: translateY(-10px);
+    }
   </style>
 </head>
 <body ng-app="ASITI">
@@ -257,231 +301,201 @@
     <div class="container">
       <div class="section-intro section-intro-white text-center pb-98px">
         <p class="section-intro__title">ASITI ONLINE 2025</p>
-        <h2 class="primary-text">Speakers</h2>
+        <h2 class="primary-text">Conoce a nuestros Speakers</h2>
         <img src="img/home/section-style.png" alt="">
-        <p class="text-white mt-4"><em>Los speakers están pendientes de confirmación. Pronto anunciaremos el lineup completo.</em></p>
       </div>
 
-      <div class="row" style="display: none;">
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/aalonzo-escalamiento-h.jpeg" alt="">
+      <div class="row">
+        <!-- Mario García -->
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalMario">
+            <img class="card-img rounded-0" src="img/home/2025/mario-garcia.jpg" alt="Mario García">
             <div class="speaker-footer">
-              <h4>Andrés Alonzo</h4>
-              <p>Escalamiento Horizontal</p>
+              <h4>Mario García</h4>
+              <p>Desarrollador de Software</p>
             </div>
             <div class="speaker-overlay">
               <ul class="speaker-social">
-                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li> -->
-                <li><a href="https://twitter.com/aalonzolu"><i class="ti-twitter-alt"></i></a></li>
-                <li><a href="https://linkedin.com/in/aalonzolu"><i class="ti-linkedin"></i></a></li>
-                <!-- <li><a href="#"><i class="ti-skype"></i></a></li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/framirez-pentesting.jpeg" alt="">
-            <div class="speaker-footer">
-              <h4>Franklin Ramirez</h4>
-              <p>Pentesting 101</p>
-            </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
-                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                <li><a href="#"><i class="ti-instagram"></i></a></li>
-                <li><a href="#"><i class="ti-skype"></i></a></li> -->
-                <li><a href="https://www.linkedin.com/in/franklin-ram%C3%ADrez/"><i class="ti-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/jramirez-ia.jpeg" alt="">
-            <div class="speaker-footer">
-              <h4>Junior Ramirez</h4>
-              <p>Integrando el poder de la IA</p>
-            </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li> -->
-                <!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-                <li><a href="https://www.linkedin.com/in/evander-ramirez/"><i class="ti-linkedin"></i></a></li>
-                <!-- <li><a href="#"><i class="ti-skype"></i></a></li> -->
+                <li><a href="https://linkedin.com/in/mariogmd" target="_blank"><i class="ti-linkedin"></i></a></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="w-100 mb-50px d-none d-lg-block"></div>
-
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/lgomez-iac.jpeg" alt="">
+        <!-- Andrés Alonzo (Lexo) -->
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalAndres">
+            <img class="card-img rounded-0" src="img/home/2025/andres-alonzo.jpg" alt="Andrés Alonzo">
             <div class="speaker-footer">
-              <h4>Luis Gómez</h4>
-              <p>Infraestructura como código AWS CDK V2</p>
+              <h4>Andrés Alonzo (Lexo)</h4>
+              <p>Senior Cloud Engineer</p>
             </div>
             <div class="speaker-overlay">
               <ul class="speaker-social">
-                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li> -->
-                <!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-                <li><a href="#"><i class="ti-linkedin"></i></a></li>
-                <!-- <li><a href="#"><i class="ti-skype"></i></a></li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/mesteban-metadatos.jpeg" alt="">
-            <div class="speaker-footer">
-              <h4>Meiling Esteban</h4>
-              <p>Metadatos</p>
-            </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li> -->
-                <!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-                <li><a href="https://www.linkedin.com/in/meiling-esteban-182a4017a/"><i class="ti-linkedin"></i></a></li>
-                <!-- <li><a href="#"><i class="ti-skype"></i></a></li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/brosales.jpeg" alt="">
-            <div class="speaker-footer">
-              <h4>Brenda Rosales</h4>
-              <p>Metadatos</p>
-            </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li> -->
-                <!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-                <!-- <li><a href="https://www.linkedin.com/in/meiling-esteban-182a4017a/"><i class="ti-linkedin"></i></a></li> -->
-                <!-- <li><a href="#"><i class="ti-skype"></i></a></li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/cmendoza.jpeg" alt="">
-            <div class="speaker-footer">
-              <h4>Consuelo Mendoza</h4>
-              <p>Metadatos</p>
-            </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li> -->
-                <!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-                <!-- <li><a href="https://www.linkedin.com/in/meiling-esteban-182a4017a/"><i class="ti-linkedin"></i></a></li> -->
-                <!-- <li><a href="#"><i class="ti-skype"></i></a></li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/tmendez-devroadmap.jpeg" alt="">
-            <div class="speaker-footer">
-              <h4>Tomás Méndez</h4>
-              <p>Developer Roadmap</p>
-            </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <!-- <li><a href="#"><i class="ti-facebook"></i></a></li> -->
-                <!-- <li><a href="#"><i class="ti-twitter-alt"></i></a></li> -->
-                <li><a href="https://www.instagram.com/tomasalonz/"><i class="ti-instagram"></i></a></li>
-                <!-- <li><a href="#"><i class="ti-skype"></i></a></li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/eestaban.jpeg" alt="">
-            <div class="speaker-footer">
-              <h4>Edson Esteban</h4>
-              <p>Configuración de Servidores</p>
-            </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                 <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
-                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                <li><a href="#"><i class="ti-instagram"></i></a></li>
-                <li><a href="#"><i class="ti-skype"></i></a></li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="w-100 mb-50px d-none d-lg-block"></div>
-
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/ssmith.jpeg" alt="">
-            <div class="speaker-footer">
-              <h4>Sergio Smith</h4>
-              <p>Configuración de Servidores</p>
-            </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                 <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
-                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                <li><a href="#"><i class="ti-instagram"></i></a></li>
-                <li><a href="#"><i class="ti-skype"></i></a></li> -->
+                <li><a href="https://github.com/aalonzolu" target="_blank"><i class="ti-github"></i></a></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/cernesto.jpeg" alt="">
+        <!-- Daniel Camey -->
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalDaniel">
+            <img class="card-img rounded-0" src="img/home/2025/camey.jpg" alt="Daniel Camey">
             <div class="speaker-footer">
-              <h4>Camilo Ernesto</h4>
-              <p>Cómo Protejernos De la suplantación de identidad</p>
+              <h4>Daniel Camey</h4>
+              <p>ICS/OT & Cybersecurity technician</p>
             </div>
             <div class="speaker-overlay">
               <ul class="speaker-social">
-                 <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
-                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                <li><a href="#"><i class="ti-instagram"></i></a></li>
-                <li><a href="#"><i class="ti-skype"></i></a></li> -->
+                <li><a href="https://linkedin.com/in/drelax-conexion" target="_blank"><i class="ti-linkedin"></i></a></li>
               </ul>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-          <div class="card-speaker">
-            <img class="card-img rounded-0" src="img/home/2023/mcastillo.jpeg" alt="">
-            <div class="speaker-footer">
-              <h4>Maria Castillo Martini</h4>
-              <p>Implementación efectiva de Herramientas opensource en la educación</p>
-            </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                 <!-- <li><a href="#"><i class="ti-facebook"></i></a></li>
-                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                <li><a href="#"><i class="ti-instagram"></i></a></li>
-                <li><a href="#"><i class="ti-skype"></i></a></li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-
         
       </div>
     </div>
   </section>
   <!--================ Speaker section End =================-->
+
+  <!-- Modal Mario García -->
+  <div class="modal fade speaker-modal" id="speakerModalMario" tabindex="-1" role="dialog" aria-labelledby="speakerModalMarioLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="speakerModalMarioLabel">Mario García</h3>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="img/home/2025/mario-garcia.jpg" alt="Mario García" class="speaker-info-img">
+              <h5>Mario García</h5>
+              <p class="text-muted">Desarrollador de Software</p>
+              <a href="https://linkedin.com/in/mariogmd" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
+                <i class="ti-linkedin"></i> LinkedIn
+              </a>
+            </div>
+            <div class="col-md-8 speaker-detail">
+              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
+              <h4 class="text-primary">WordPress al estilo GitOps: Tu entorno de desarrollo local en Kubernetes</h4>
+              
+              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
+              <p>En esta charla, Mario García compartirá su experiencia en la implementación de entornos de desarrollo local para WordPress utilizando Kubernetes y prácticas GitOps, permitiendo a los desarrolladores tener ambientes consistentes, escalables y fáciles de gestionar.</p>
+              
+              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
+              <ul class="list-unstyled">
+                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
+                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
+                <li><strong>Modalidad:</strong> Online</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Andrés Alonzo -->
+  <div class="modal fade speaker-modal" id="speakerModalAndres" tabindex="-1" role="dialog" aria-labelledby="speakerModalAndresLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="speakerModalAndresLabel">Andrés Alonzo (Lexo)</h3>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="img/home/2025/andres-alonzo.jpg" alt="Andrés Alonzo" class="speaker-info-img">
+              <h5>Andrés Alonzo (Lexo)</h5>
+              <p class="text-muted">Senior Cloud Engineer</p>
+              <a href="https://github.com/aalonzolu" target="_blank" class="btn btn-sm btn-outline-dark mt-2">
+                <i class="ti-github"></i> GitHub
+              </a>
+            </div>
+            <div class="col-md-8 speaker-detail">
+              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
+              <h4 class="text-primary">MCP: Herramientas para la IA</h4>
+              
+              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
+              <p>Andrés Alonzo (Lexo) nos introducirá al Model Context Protocol (MCP), explorando cómo esta tecnología está revolucionando la forma en que las herramientas de inteligencia artificial interactúan y se integran en diferentes sistemas y aplicaciones modernas.</p>
+              
+              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
+              <p>Senior Cloud Engineer con amplia experiencia en arquitecturas cloud y soluciones de inteligencia artificial.</p>
+              
+              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
+              <ul class="list-unstyled">
+                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
+                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
+                <li><strong>Modalidad:</strong> Online</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Daniel Camey -->
+  <div class="modal fade speaker-modal" id="speakerModalDaniel" tabindex="-1" role="dialog" aria-labelledby="speakerModalDanielLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="speakerModalDanielLabel">Daniel Camey</h3>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="img/home/2025/camey.jpg" alt="Daniel Camey" class="speaker-info-img">
+              <h5>Daniel Camey</h5>
+              <p class="text-muted">ICS/OT & Cybersecurity technician</p>
+              <a href="https://linkedin.com/in/drelax-conexion" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
+                <i class="ti-linkedin"></i> LinkedIn
+              </a>
+            </div>
+            <div class="col-md-8 speaker-detail">
+              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
+              <h4 class="text-primary">Riesgos en protocolos de comunicación OT/IOT</h4>
+              
+              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
+              <p>Daniel Camey explorará los riesgos de seguridad presentes en los protocolos de comunicación utilizados en Tecnología Operacional (OT) e Internet de las Cosas (IoT), abordando las vulnerabilidades críticas y mejores prácticas para proteger sistemas industriales y dispositivos conectados.</p>
+              
+              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
+              <p>Técnico especializado en Sistemas de Control Industrial (ICS/OT) y Ciberseguridad, con experiencia en la protección de infraestructuras críticas y sistemas industriales.</p>
+              
+              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
+              <ul class="list-unstyled">
+                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
+                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
+                <li><strong>Modalidad:</strong> Online</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!--================ Schedule section Start =================-->
