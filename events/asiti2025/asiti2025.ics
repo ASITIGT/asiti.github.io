@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ASITI//ASITI 2025//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:asiti-2025-20251116@asiti.io.gt
+SUMMARY:ASITI 2025 - Congreso Online de Tecnología y Seguridad Informática
+DTSTAMP:20251115T000000Z
+DTSTART:20251116T150000Z
+DTEND:20251116T190000Z
+DESCRIPTION:Congreso online de Tecnología y Seguridad Informática organizado por ASITI.\n\nEnlace de acceso al evento en Microsoft Teams:\nhttps://teams.microsoft.com/l/meetup-join/19%3ameeting_MjZhNzljNzktMTlkYy00NjUxLTlmNTctYWMyNzNjN2UyNTE0%40thread.v2/0?context=%7b%22Tid%22%3a%2261425c17-f352-4028-bfd0-ad675b021eff%22%2c%22Oid%22%3a%228d203ea4-c1e3-4ed1-a459-efee124bcf72%22%7d\n\nMás información del evento:\nhttps://asiti.io.gt/
+URL:https://asiti.io.gt/
+LOCATION:Online
+END:VEVENT
+END:VCALENDAR
