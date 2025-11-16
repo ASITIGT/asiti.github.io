@@ -27,14 +27,24 @@ function initializeClock(id, endtime) {
   function updateClock() {
     var t = getTimeRemaining(endtime);
 
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    // secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
     if (t.total <= 0) {
+      // El evento ya comenzó o finalizó
       clearInterval(timeinterval);
+      daysSpan.innerHTML = '0';
+      hoursSpan.innerHTML = '00';
+      minutesSpan.innerHTML = '00';
+      
+      // Ocultar el countdown y mostrar mensaje
+      var clockdivContent = document.querySelector('.clockdiv-content');
+      if (clockdivContent) {
+        clockdivContent.innerHTML = '<p class="h4 primary-text2 mb-2">¡El evento está en curso!</p><p class="h5 primary-text mb-2">🎉 Gracias por participar</p>';
+      }
+    } else {
+      daysSpan.innerHTML = t.days;
+      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     }
+    // secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
   }
 
   updateClock();
