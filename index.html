@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ASITI 2025 - Congreso Online de Tecnología y Seguridad Informática</title>
+  <title>FLISOL 2026 Huehuetenango - Festival Latinoamericano de Instalación de Software Libre</title>
 	<link rel="icon" href="img/Fevicon.png" type="image/png">
 
   <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="vendors/flat-icon/font/flaticon.css">
 
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Script para header compartido -->
+  <script src="js/shared-header.js"></script>
   
   <!-- Estilos personalizados para redes sociales -->
   <style>
@@ -117,58 +120,79 @@
       margin-top: 20px;
       margin-bottom: 10px;
     }
+    
+    /* Estilos para agenda compacta */
+    .time-small {
+      font-size: 10px;
+      font-weight: bold;
+      color: #6c757d;
+      min-width: 35px;
+    }
+    
+    .badge-sm {
+      font-size: 9px;
+      padding: 3px 6px;
+    }
+    
+    .event-item h6 {
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .time-block {
+      height: 100%;
+    }
+    
+    @media (max-width: 768px) {
+      .agenda-compact .col-md-3 {
+        margin-bottom: 15px;
+      }
+      
+      .time-header {
+        font-size: 12px !important;
+      }
+      
+      .event-item h6 {
+        font-size: 12px !important;
+      }
+    }
   </style>
 </head>
 <body ng-app="ASITI">
 
   <!--================ Header Menu Area start =================-->
-  <header class="header_area">
-    <div class="main_menu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container box_1620">
-          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+  <div id="shared-header">
+    <!-- El header se carga aquí dinámicamente -->
+    <header class="header_area">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
+            <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-            <ul class="nav navbar-nav menu_nav justify-content-end">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
-              <!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>  -->
-              <li class="nav-item"><a class="nav-link" href="#section_speakers">Speakers</a>
-                <li class="nav-item"><a class="nav-link" href="#section_crono">Cronograma</a>
-                <li class="nav-item"><a class="nav-link" href="2023.html">ASITI 2023</a>
-              <!-- <li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Pages</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="event-schedule.html">Schedule</a>                  
-                  <li class="nav-item"><a class="nav-link" href="event-gallery.html">Gallery</a>                  
-                  <li class="nav-item"><a class="nav-link" href="price.html">Price Table</a>                  
-                </ul>
-							</li> -->
-
-              <!-- <li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Blog</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog Single</a></li>
-                  <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog Details</a></li>
-                </ul>
-							</li> -->
-              <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li> -->
-            </ul>
-
-            <!-- <ul class="nav-right text-center text-lg-right py-4 py-lg-0">
-              <li><a href="live.html" >LIVE</a></li>
-            </ul> -->
-          </div> 
-        </div>
-      </nav>
-    </div>
-  </header>
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+              <ul class="nav navbar-nav menu_nav justify-content-end">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+                <li class="nav-item"><a class="nav-link" href="#section_speakers">Speakers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section_crono">Cronograma</a></li>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eventos Anteriores</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="2023.html">ASITI 2023</a></li>                  
+                    <li class="nav-item"><a class="nav-link" href="2025.html">ASITI 2025</a></li>                  
+                  </ul>
+                </li>
+              </ul>
+            </div> 
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
   <!--================Header Menu Area =================-->
 
   
@@ -176,10 +200,11 @@
   <section class="hero-banner">
     <div class="container text-center">
       <span class="hero-banner-icon"><i class="flaticon-sing"></i></span>
-      <p>16 de Noviembre, 2025</p>
-      <h1>CONGRESO ONLINE DE TECNOLOGÍA Y SEGURIDAD INFORMÁTICA</h1>
-      <p>📌 Modalidad: Online</p>
-      <a class="button button-header mt-4" href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank">Inscríbete al Evento</a>
+      <p>17 de Mayo, 2026</p>
+      <h1>FESTIVAL LATINOAMERICANO DE INSTALACIÓN DE SOFTWARE LIBRE</h1>
+      <p>📌 Universidad Da Vinci, Huehuetenango, Guatemala</p>
+      <p class="mt-2">🕐 08:00 - 15:00 hrs</p>
+      <a class="button button-header mt-4" href="https://ir.gt/flisolhuehue" target="_blank">Inscríbete al Evento</a>
       
       <!-- Redes Sociales -->
       <div class="social-media mt-4">
@@ -216,18 +241,22 @@
       <div class="row">
         <div class="col-lg-6 align-self-center mb-5 mb-lg-0">
           <div class="innovative-wrapper">
-            <h3 class="primary-text">ASITI 2025 <br class="d-none d-xl-block"> Online</h3>
+            <h3 class="primary-text">FLISOL 2026 <br class="d-none d-xl-block"> Huehuetenango</h3>
             <p class="h4 primary-text2 mb-3">Evento Gratuito!!</p>
-            <p>La Asociación de Innovación Tecnológica e Informática -ASITI-, tenemos el agrado de hacerle la cordial invitación a este gran evento y agradecerle de antemano por su preferencia y participación.</p>
+            <p>El Festival Latinoamericano de Instalación de Software Libre (FLISOL) es un evento internacional que se realiza en toda América Latina. En Huehuetenango te invitamos a ser parte de esta celebración del software libre y open source.</p>
             <br>
-            <p>Este evento va dirigido a todos los amantes de la Innovación Tecnológica y la Seguridad Informática, tenemos el privilegio de contar con ponentes reconocidos y apasionados por lo que hacen.</p>
+            <p><strong>📅 Fecha:</strong> 17 de mayo de 2026<br>
+            <strong>🕐 Horario:</strong> 08:00 a 15:00 hrs<br>
+            <strong>📍 Sede:</strong> Universidad Da Vinci<br>
+            <strong>📍 Dirección:</strong> 7, 7ª. Calle 13-70, El Terrero, Zona 4, Huehuetenango</p>
             <br>
             <ul>
-              <li>Se dará diploma digital de participación.</li>
-              <li>Durante el evento se estará enviando link para confirmar asistencia.</li>
-              <li>Se estará enviando el diploma 5 días después del evento.</li>
-              <li>Se estará enviando el link de transmisión al correo proporcionado en el formulario.</li>
-              <li><strong>Registro:</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank">Formulario de Inscripción</a></li>
+              <li>✅ Instalación gratuita de distribuciones GNU/Linux</li>
+              <li>🎤 Charlas sobre software libre y tecnologías abiertas</li>
+              <li>🛠️ Talleres prácticos de pentesting y herramientas open source</li>
+              <li>🤖 Conferencias sobre IA y desarrollo moderno</li>
+              <li>🎓 Apoyo técnico y resolución de dudas</li>
+              <li><strong>📝 Registro:</strong> <a href="https://ir.gt/flisolhuehue" target="_blank">Formulario de Inscripción</a></li>
             </ul>
           </div>
         </div>
@@ -249,9 +278,11 @@
           </ul>
           
           <div class="clockdiv-content text-center">
-            <p class="h4 primary-text2 mb-2" id="demo_hour">16 de Noviembre de 2025</p>
-            <p class="h5 primary-text mb-2">🕐 Hora de Guatemala: 09:00am - 13:00hrs (GMT-6)</p>
-            <a class="button button-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank">Registro</a>
+            <p class="h4 primary-text2 mb-2" id="demo_hour">17 de Mayo de 2026</p>
+            <p class="h5 primary-text mb-2">📍 Universidad Da Vinci, Huehuetenango</p>
+            <p class="h6 primary-text mb-3">🕐 08:00 - 15:00 hrs</p>
+            <a class="button button-link" href="https://ir.gt/flisolhuehue" target="_blank">Registro</a>
+            <a class="button button-link ml-2" href="https://maps.app.goo.gl/XXyASrLz2Q625TTS6" target="_blank">🗺️ Ubicación</a>
           </div>
         </div>
       </div>
@@ -311,104 +342,140 @@
   <section class="speaker-bg section-padding" >
     <div class="container">
       <div class="section-intro section-intro-white text-center pb-98px">
-        <p class="section-intro__title">ASITI ONLINE 2025</p>
-        <h2 class="primary-text">Conoce a nuestros Speakers</h2>
+        <p class="section-intro__title">FLISOL 2026</p>
+        <h2 class="primary-text">Nuestros Speakers</h2>
         <img src="img/home/section-style.png" alt="">
       </div>
 
       <div class="row">
-        <!-- Mario García -->
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalMario">
-            <img class="card-img rounded-0" src="img/home/2025/mario-garcia.jpg" alt="Mario García">
-            <div class="speaker-footer">
-              <h4>Mario García</h4>
-              <p>Desarrollador de Software</p>
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
             </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <li><a href="https://linkedin.com/in/mariogmd" target="_blank"><i class="ti-linkedin"></i></a></li>
-              </ul>
+            <div class="speaker-footer">
+              <h4>Miguel Tellez</h4>
+              <p>FLISoL: Tecnología libre para todos</p>
             </div>
           </div>
         </div>
-
-        <!-- Andrés Alonzo (Lexo) -->
+        
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalAndres">
-            <img class="card-img rounded-0" src="img/home/2025/andres-alonzo.jpg" alt="Andrés Alonzo">
-            <div class="speaker-footer">
-              <h4>Andrés Alonzo (Lexo)</h4>
-              <p>Senior Cloud Engineer</p>
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
             </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <li><a href="https://github.com/aalonzolu" target="_blank"><i class="ti-github"></i></a></li>
-              </ul>
+            <div class="speaker-footer">
+              <h4>Luis Estrada</h4>
+              <p>Introducción a Distribuciones GNU/Linux</p>
             </div>
           </div>
         </div>
-
-        <!-- Daniel Camey -->
+        
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalDaniel">
-            <img class="card-img rounded-0" src="img/home/2025/camey.jpg" alt="Daniel Camey">
-            <div class="speaker-footer">
-              <h4>Daniel Camey</h4>
-              <p>ICS/OT & Cybersecurity technician</p>
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
             </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <li><a href="https://linkedin.com/in/drelax-conexion" target="_blank"><i class="ti-linkedin"></i></a></li>
-              </ul>
+            <div class="speaker-footer">
+              <h4>Franklin Ramírez</h4>
+              <p>Herramientas Open Source para Pentesting</p>
             </div>
           </div>
         </div>
-
-        <!-- Diego Porras -->
+        
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalDiego">
-            <img class="card-img rounded-0" src="img/home/2025/dporras.jpg" alt="Diego Porras">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
             <div class="speaker-footer">
               <h4>Diego Porras</h4>
-              <p>Security Engineer - Amazon Devices</p>
-            </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <li><a href="https://linkedin.com/company/htb-gt" target="_blank"><i class="ti-linkedin"></i></a></li>
-              </ul>
+              <p>Cómo convertirse en hacker</p>
             </div>
           </div>
         </div>
-
-        <!-- Camilo Ernesto Losada -->
+        
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalCamilo">
-            <img class="card-img rounded-0" src="img/home/2025/camilo.jpg" alt="Camilo Ernesto Losada">
-            <div class="speaker-footer">
-              <h4>Camilo Ernesto Losada</h4>
-              <p>Especialista en Seguridad Informática</p>
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
             </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <li><a href="#" target="_blank"><i class="ti-world"></i></a></li>
-              </ul>
+            <div class="speaker-footer">
+              <h4>Daniel Camey</h4>
+              <p>Análisis de señales RF con SDR</p>
             </div>
           </div>
         </div>
-
-        <!-- Galoget Latorre -->
+        
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalGaloget">
-            <img class="card-img rounded-0" src="img/home/2025/galoget.jpg" alt="Galoget Latorre">
-            <div class="speaker-footer">
-              <h4>Galoget Latorre</h4>
-              <p>Senior Penetration Tester & Security Engineer</p>
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-users" style="font-size: 48px;"></i>
             </div>
-            <div class="speaker-overlay">
-              <ul class="speaker-social">
-                <li><a href="https://linkedin.com/in/galoget" target="_blank"><i class="ti-linkedin"></i></a></li>
-              </ul>
+            <div class="speaker-footer">
+              <h4>Julio Jiménez & Fernando Velásquez</h4>
+              <p>Metadatos con herramientas Open Source</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-users" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Zaqueo Gómez & Andrés Alonzo</h4>
+              <p>Telefonía IP empresarial con Issabel</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Tomás Méndez</h4>
+              <p>Desarrollo moderno con Agentes de IA</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-university" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Universidad Da Vinci</h4>
+              <p>Presentación Institucional</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Meiling Esteban</h4>
+              <p>Arduino con IA</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Sergio Smith</h4>
+              <p>Cómo funcionan los modelos de lenguaje (LLMs)</p>
             </div>
           </div>
         </div>
@@ -418,321 +485,236 @@
   </section>
   <!--================ Speaker section End =================-->
 
-  <!-- Modal Mario García -->
-  <div class="modal fade speaker-modal" id="speakerModalMario" tabindex="-1" role="dialog" aria-labelledby="speakerModalMarioLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="speakerModalMarioLabel">Mario García</h3>
-          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <img src="img/home/2025/mario-garcia.jpg" alt="Mario García" class="speaker-info-img">
-              <h5>Mario García</h5>
-              <p class="text-muted">Desarrollador de Software</p>
-              <a href="https://linkedin.com/in/mariogmd" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
-                <i class="ti-linkedin"></i> LinkedIn
-              </a>
-            </div>
-            <div class="col-md-8 speaker-detail">
-              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
-              <h4 class="text-primary">WordPress al estilo GitOps: Tu entorno de desarrollo local en Kubernetes</h4>
-              
-              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
-              <p>En esta charla, Mario García compartirá su experiencia en la implementación de entornos de desarrollo local para WordPress utilizando Kubernetes y prácticas GitOps, permitiendo a los desarrolladores tener ambientes consistentes, escalables y fáciles de gestionar.</p>
-              
-              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
-              <ul class="list-unstyled">
-                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
-                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
-                <li><strong>Modalidad:</strong> Online</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Andrés Alonzo -->
-  <div class="modal fade speaker-modal" id="speakerModalAndres" tabindex="-1" role="dialog" aria-labelledby="speakerModalAndresLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="speakerModalAndresLabel">Andrés Alonzo (Lexo)</h3>
-          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <img src="img/home/2025/andres-alonzo.jpg" alt="Andrés Alonzo" class="speaker-info-img">
-              <h5>Andrés Alonzo (Lexo)</h5>
-              <p class="text-muted">Senior Cloud Engineer</p>
-              <a href="https://github.com/aalonzolu" target="_blank" class="btn btn-sm btn-outline-dark mt-2">
-                <i class="ti-github"></i> GitHub
-              </a>
-            </div>
-            <div class="col-md-8 speaker-detail">
-              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
-              <h4 class="text-primary">MCP: Herramientas para la IA</h4>
-              
-              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
-              <p>Andrés Alonzo (Lexo) nos introducirá al Model Context Protocol (MCP), explorando cómo esta tecnología está revolucionando la forma en que las herramientas de inteligencia artificial interactúan y se integran en diferentes sistemas y aplicaciones modernas.</p>
-              
-              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
-              <p>Senior Cloud Engineer con amplia experiencia en arquitecturas cloud y soluciones de inteligencia artificial.</p>
-              
-              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
-              <ul class="list-unstyled">
-                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
-                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
-                <li><strong>Modalidad:</strong> Online</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Daniel Camey -->
-  <div class="modal fade speaker-modal" id="speakerModalDaniel" tabindex="-1" role="dialog" aria-labelledby="speakerModalDanielLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="speakerModalDanielLabel">Daniel Camey</h3>
-          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <img src="img/home/2025/camey.jpg" alt="Daniel Camey" class="speaker-info-img">
-              <h5>Daniel Camey</h5>
-              <p class="text-muted">ICS/OT & Cybersecurity technician</p>
-              <a href="https://linkedin.com/in/drelax-conexion" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
-                <i class="ti-linkedin"></i> LinkedIn
-              </a>
-            </div>
-            <div class="col-md-8 speaker-detail">
-              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
-              <h4 class="text-primary">Riesgos en protocolos de comunicación OT/IOT</h4>
-              
-              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
-              <p>Daniel Camey explorará los riesgos de seguridad presentes en los protocolos de comunicación utilizados en Tecnología Operacional (OT) e Internet de las Cosas (IoT), abordando las vulnerabilidades críticas y mejores prácticas para proteger sistemas industriales y dispositivos conectados.</p>
-              
-              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
-              <p>Técnico especializado en Sistemas de Control Industrial (ICS/OT) y Ciberseguridad, con experiencia en la protección de infraestructuras críticas y sistemas industriales.</p>
-              
-              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
-              <ul class="list-unstyled">
-                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
-                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
-                <li><strong>Modalidad:</strong> Online</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Diego Porras -->
-  <div class="modal fade speaker-modal" id="speakerModalDiego" tabindex="-1" role="dialog" aria-labelledby="speakerModalDiegoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="speakerModalDiegoLabel">Diego Porras</h3>
-          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <img src="img/home/2025/dporras.jpg" alt="Diego Porras" class="speaker-info-img">
-              <h5>Diego Porras</h5>
-              <p class="text-muted">Security Engineer - Amazon Devices</p>
-              <p class="text-muted small">(Kuiper/Eero)</p>
-              <a href="https://linkedin.com/company/htb-gt" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
-                <i class="ti-linkedin"></i> LinkedIn
-              </a>
-            </div>
-            <div class="col-md-8 speaker-detail">
-              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
-              <h4 class="text-primary">Amazon, Google, Okta? No hay límites para los latinos.</h4>
-              
-              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
-              <p>Diego Porras compartirá su experiencia trabajando en empresas tecnológicas de clase mundial como Amazon, demostrando que no hay límites para los profesionales latinos en la industria tech global. Una charla inspiradora sobre oportunidades, superación y desarrollo profesional.</p>
-              
-              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
-              <p>Security Engineer en Amazon Devices (Kuiper/Eero), con experiencia en seguridad de dispositivos y sistemas a gran escala en empresas líderes de la industria tecnológica.</p>
-              
-              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
-              <ul class="list-unstyled">
-                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
-                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
-                <li><strong>Modalidad:</strong> Online</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Camilo Ernesto Losada -->
-  <div class="modal fade speaker-modal" id="speakerModalCamilo" tabindex="-1" role="dialog" aria-labelledby="speakerModalCamiloLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="speakerModalCamiloLabel">Camilo Ernesto Losada</h3>
-          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <img src="img/home/2025/camilo.jpg" alt="Camilo Ernesto Losada" class="speaker-info-img">
-              <h5>Camilo Ernesto Losada</h5>
-              <p class="text-muted">Especialista en Seguridad Informática</p>
-              <p class="text-muted small">Consejo de Estado - Rama Judicial</p>
-            </div>
-            <div class="col-md-8 speaker-detail">
-              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
-              <h4 class="text-primary">El Mercado global del Ciberdelito 2025 - conociendo el lado oscuro</h4>
-              
-              <h5 class="mt-4"><i class="ti-clock"></i> Horario</h5>
-              <p><strong>12:15 PM (GMT-6)</strong></p>
-              
-              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
-              <p>Ingeniero, especialista de seguridad informática de la UNAD y maestro de ciberseguridad de la Universidad Internacional de Valencia. Con más de 20 años de experiencia en el sector público trabajando en áreas de TI, seguridad e infraestructura, actualmente se desempeña como profesional en seguridad de la información en el Consejo de Estado de la Rama Judicial.</p>
-              <p>Ha pertenecido a varias comunidades de Software Libre desde el 2002, colaborando como promotor, organizador y conferencista en distintos eventos de Software Libre en Colombia.</p>
-              
-              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
-              <ul class="list-unstyled">
-                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
-                <li><strong>Horario General:</strong> 09:00am - 13:00hrs (GMT-6)</li>
-                <li><strong>Modalidad:</strong> Online</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Galoget Latorre -->
-  <div class="modal fade speaker-modal" id="speakerModalGaloget" tabindex="-1" role="dialog" aria-labelledby="speakerModalGalogetLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="speakerModalGalogetLabel">Galoget Latorre</h3>
-          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <img src="img/home/2025/galoget.jpg" alt="Galoget Latorre" class="speaker-info-img">
-              <h5>Galoget Latorre</h5>
-              <p class="text-muted">Senior Security Engineer</p>
-              <p class="text-muted small">(AppSec & OffSec)</p>
-              <a href="https://linkedin.com/in/galoget" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
-                <i class="ti-linkedin"></i> LinkedIn
-              </a>
-              <div class="mt-3">
-                <span class="badge badge-primary mb-1">OSCP</span>
-                <span class="badge badge-primary mb-1">CEH Practical</span>
-                <span class="badge badge-primary mb-1">eWPTX</span>
-                <span class="badge badge-success mb-1">Top 1% TryHackMe</span>
-              </div>
-            </div>
-            <div class="col-md-8 speaker-detail">
-              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
-              <h4 class="text-primary">AI-Assisted Malware Analysis with LLMs</h4>
-              
-              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
-              <p>El análisis de malware y la ingeniería inversa se están volviendo cada vez más complejos, ya que los atacantes utilizan binarios ofuscados, packers y técnicas avanzadas de evasión.</p>
-              <p>En esta sesión hablaremos de varias herramientas, entre ellas <strong>GhidraMCP</strong>, una extensión de código abierto que integra Modelos de Lenguaje de Gran Escala (LLMs) en Ghidra para potenciar tu flujo de trabajo de reverse engineering.</p>
-              <p>Descubre cómo GhidraMCP puede explicar funciones, renombrar símbolos ofuscados, resumir código desensamblado, sugerir reglas YARA e incluso redactar informes, todo impulsado por IA. La charla incluirá demostraciones en vivo, muestras reales de malware y un análisis profundo de la arquitectura y limitaciones de los LLMs en el contexto del análisis binario.</p>
-              
-              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
-              <p><strong>Ingeniero en Sistemas</strong> graduado con honores (Cum Laude) de la Escuela Politécnica Nacional (EPN), actualmente culminando <strong>Maestría en Ciberseguridad en Georgia Institute of Technology</strong> (Top 2 en EE.UU.).</p>
-              
-              <p><strong>Senior Penetration Tester</strong> y <strong>Application Security Engineer</strong> con experiencia liderando evaluaciones de seguridad para instituciones financieras, ISPs y empresas globales. Autor de exploits publicados en Exploit-DB y <strong>Top 1% mundial en TryHackMe</strong>.</p>
-
-              <p><strong>Certificaciones:</strong> OSCP, OSWP, CEH Practical, eWPTX, eCPPT, eCXD, HTB AWS/GCP/Azure, SWIFT CSP Expert, entre otras.</p>
-
-              <p><strong>Instructor y conferencista internacional</strong>, colaborando con instituciones como CEC-EPN, Capacitación USACH y Skillnest. Participante destacado en CTFs: DEF CON AppSec Village 2025, Amazon AppSec CTF 2025, Google CTF Mini 2022.</p>
-              
-              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
-              <ul class="list-unstyled">
-                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
-                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
-                <li><strong>Modalidad:</strong> Online</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Modales de speakers removidos para FLISOL 2026 -->
 
 
   <!--================ Schedule section Start =================-->
   <div id="section_crono"></div>
   <section class="section-margin mb-5 pb-5">
     <div class="container">
-      <div class="section-intro text-center pb-98px">
-        <p class="section-intro__title">ASITI 2025</p>
-        <h2 class="primary-text">Cronograma</h2>
+      <div class="section-intro text-center pb-98px agenda-section">
+        <style>
+          /* CSS personalizado para expandir la agenda */
+          .agenda-section {
+            max-width: 100% !important;
+          }
+          .agenda-section .container {
+            max-width: 1200px;
+          }
+          @media (min-width: 1400px) {
+            .agenda-section .container {
+              max-width: 1400px;
+            }
+          }
+        </style>
+        <p class="section-intro__title">FLISOL 2026</p>
+        <h2 class="primary-text">Agenda del Evento</h2>
         <img src="img/home/section-style.png" alt="">
-        <p class="mt-4"><em>El cronograma detallado se publicará próximamente junto con el anuncio de los speakers.</em></p>
         
-        <div class="mt-5 p-4" style="background-color: #f8f9fa; border-radius: 10px;">
-          <h4 class="text-primary">Información General del Evento</h4>
-          <div class="row mt-4">
-            <div class="col-md-6">
-              <p><strong>📅 Fecha:</strong> 16 de Noviembre, 2025</p>
-              <p><strong>🕐 Horario:</strong> 09:00am - 13:00hrs (GMT-6)</p>
+        <div class="mt-4">
+          <!-- Agenda mejorada con mejor legibilidad -->
+          <div class="agenda-improved" style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+            
+            <!-- Header de la agenda -->
+            <div class="text-center mb-5">
+              <h4 class="mb-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">
+                📅 Agenda del Evento FLISOL 2026
+              </h4>
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="d-flex flex-wrap justify-content-center">
+                    <span class="badge badge-info mx-1 mb-2" style="font-size: 12px; padding: 8px 12px;">🎤 Conferencias</span>
+                    <span class="badge badge-warning mx-1 mb-2" style="font-size: 12px; padding: 8px 12px;">🛠️ Talleres</span>
+                    <span class="badge badge-success mx-1 mb-2" style="font-size: 12px; padding: 8px 12px;">💡 Charlas</span>
+                    <span class="badge badge-secondary mx-1 mb-2" style="font-size: 12px; padding: 8px 12px;">🏛️ Institucional</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-6">
-              <p><strong>🌐 Modalidad:</strong> Online</p>
-              <p><strong>💰 Costo:</strong> Gratuito</p>
+
+            <!-- Timeline horizontal mejorado -->
+            <div class="timeline-improved">
+              <div class="row">
+                <!-- Columna 1: Mañana (08:00-11:45) -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="time-section">
+                    <div class="time-header text-center p-3 mb-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px;">
+                      <h5 class="mb-0" style="font-size: 16px; font-weight: 600;">🌅 Mañana (08:00 - 11:45)</h5>
+                    </div>
+                    
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #17a2b8; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">08:00</span>
+                        <span class="badge badge-info" style="font-size: 11px;">Bienvenida</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">FLISoL: Tecnología libre para todos</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Miguel Tellez</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">08:30</span>
+                        <span class="badge badge-success" style="font-size: 11px;">Conferencia</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Introducción a GNU/Linux</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Luis Estrada</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #ffc107; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">09:00</span>
+                        <span class="badge badge-warning" style="font-size: 11px;">Taller</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Pentesting con herramientas Open Source</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Franklin Ramírez</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">09:45</span>
+                        <span class="badge badge-success" style="font-size: 11px;">Conferencia</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Cómo ser hacker ético</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Diego Porras</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #ffc107; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">10:30</span>
+                        <span class="badge badge-warning" style="font-size: 11px;">Taller</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Análisis de señales RF con SDR</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Daniel Camey</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #ffc107; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">11:15</span>
+                        <span class="badge badge-warning" style="font-size: 11px;">Taller</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Análisis de metadatos Open Source</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👥 J.Jiménez & F.Velásquez</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Columna 2: Tarde (11:45-15:25) -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="time-section">
+                    <div class="time-header text-center p-3 mb-3" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; border-radius: 12px;">
+                      <h5 class="mb-0" style="font-size: 16px; font-weight: 600;">☀️ Tarde (11:45 - 15:25)</h5>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #ffc107; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">11:45</span>
+                        <span class="badge badge-warning" style="font-size: 11px;">Taller</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Telefonía IP con Issabel</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👥 Z.Gómez & A.Alonzo</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">12:30</span>
+                        <span class="badge badge-success" style="font-size: 11px;">Conferencia</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Desarrollo moderno con Agentes de IA</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Tomás Méndez</p>
+                    </div>
+
+                    <!-- Almuerzo destacado -->
+                    <div class="lunch-break mb-4 p-4 text-center" style="border: 2px solid #17a2b8; background: linear-gradient(135deg, #17a2b8, #138496); color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                      <div class="time-badge mb-2" style="color: white; font-weight: bold; font-size: 14px;">13:15 - 14:15</div>
+                      <h5 class="mb-2" style="font-size: 18px;">🍽️ Almuerzo libre</h5>
+                      <p class="mb-0" style="font-size: 14px;">Receso para almorzar y networking</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #6c757d; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">14:15</span>
+                        <span class="badge badge-secondary" style="font-size: 11px;">Institucional</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Presentación Universidad Da Vinci</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">🏛️ Equipo institucional</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #ffc107; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">14:35</span>
+                        <span class="badge badge-warning" style="font-size: 11px;">Taller</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Arduino con Inteligencia Artificial</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Meiling Esteban</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">14:55</span>
+                        <span class="badge badge-success" style="font-size: 11px;">Conferencia</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Cómo funcionan los modelos de lenguaje (LLMs)</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Sergio Smith</p>
+                    </div>
+
+                    <!-- Call to action final -->
+                    <div class="mt-4 p-4 text-center" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15)); border: 2px solid #667eea; border-radius: 12px;">
+                      <h6 class="text-primary mb-2" style="font-size: 16px; font-weight: 600;">🎯 ¡Únete al evento!</h6>
+                      <p class="text-muted mb-3" style="font-size: 14px;">Evento completamente gratuito</p>
+                      <a href="https://ir.gt/flisolhuehue" target="_blank" class="btn btn-primary" style="font-size: 14px; padding: 10px 25px; border-radius: 25px;">
+                        📝 Registrarse ahora
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resumen rápido -->
+            <div class="row mt-3 pt-3" style="border-top: 1px solid #dee2e6;">
+              <div class="col-md-8">
+                <div class="d-flex flex-wrap">
+                  <span class="badge badge-light border mr-2 mb-1" style="font-size: 11px;">📅 17 Mayo 2026</span>
+                  <span class="badge badge-light border mr-2 mb-1" style="font-size: 11px;">🕐 08:00-15:25</span>
+                  <span class="badge badge-light border mr-2 mb-1" style="font-size: 11px;">📍 Universidad Da Vinci</span>
+                  <span class="badge badge-light border mr-2 mb-1" style="font-size: 11px;">💰 Gratuito</span>
+                </div>
+              </div>
+              <div class="col-md-4 text-md-right">
+                <a href="https://ir.gt/flisolhuehue" target="_blank" class="btn btn-outline-primary btn-sm">
+                  Registrarse →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-3 p-3" style="background-color: #f8f9fa; border-radius: 10px;">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <h5 class="text-primary mb-2" style="font-size: 16px;">📍 Universidad Da Vinci - Huehuetenango</h5>
+              <p class="mb-1 small"><strong>Dirección:</strong> 7, 7ª. Calle 13-70, El Terrero, Zona 4, Huehuetenango, Guatemala</p>
+              <div class="d-flex flex-wrap mt-2">
+                <a href="https://maps.app.goo.gl/XXyASrLz2Q625TTS6" target="_blank" class="btn btn-outline-primary btn-sm mr-2 mb-1" style="font-size: 11px;">
+                  <i class="fab fa-google"></i> Google Maps
+                </a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=15.3298971,-91.4853953" target="_blank" class="btn btn-outline-success btn-sm mr-2 mb-1" style="font-size: 11px;">
+                  🧭 Cómo llegar
+                </a>
+                <a href="https://waze.com/ul?ll=15.3298971,-91.4853953&navigate=yes" target="_blank" class="btn btn-outline-info btn-sm mr-2 mb-1" style="font-size: 11px;">
+                  🚗 Waze
+                </a>
+                <a href="https://maps.apple.com/?daddr=15.3298971,-91.4853953&q=Universidad%20Da%20Vinci%20Huehuetenango" target="_blank" class="btn btn-outline-dark btn-sm mb-1" style="font-size: 11px;">
+                  🍎 Apple Maps
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 text-md-right">
+              <p class="small text-muted mb-1">📍 Coordenadas: 15.3298971, -91.4853953</p>
+              <p class="small text-muted mb-2">Plus Code: 8GH7+XX Huehuetenango</p>
+              <a href="https://ir.gt/flisolhuehue" target="_blank" class="btn btn-primary">
+                📝 Registrarse Ahora
+              </a>
             </div>
           </div>
         </div>
@@ -906,7 +888,13 @@
         <h2 class="primary-text">Canal de Contacto e Informes</h2>
         <img src="img/home/section-style.png" alt="">
         <p class="text-white mt-4">
-          📩 <a href="mailto:asitiguatemala@gmail.com" class="text-warning">asitiguatemala@gmail.com</a>
+          � <a href="mailto:asitiguatemala@gmail.com" class="text-warning">asitiguatemala@gmail.com</a>
+        </p>
+        <p class="text-white mt-2">
+          🔗 Más información: <a href="https://www.facebook.com/FLISoLHuehuetenango" class="text-warning" target="_blank">Facebook FLISOL Huehuetenango</a>
+        </p>
+        <p class="text-white mt-2">
+          🌐 Sitio web: <a href="https://asiti.io.gt/" class="text-warning" target="_blank">ASITI</a>
         </p>
       </div>
       
@@ -919,7 +907,7 @@
             Únete a este evento y apoya a la comunidad tecnológica de Guatemala.<br>
             Contáctanos para conocer las oportunidades de patrocinio.
           </p>
-          <a href="mailto:asitiguatemala@gmail.com?subject=Patrocinio ASITI 2025" class="button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; display: inline-block; transition: all 0.3s;">
+          <a href="mailto:asitiguatemala@gmail.com?subject=Patrocinio FLISOL 2026" class="button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; display: inline-block; transition: all 0.3s;">
             <i class="fa fa-envelope"></i> Contactar para Patrocinio
           </a>
         </div>
@@ -1131,9 +1119,9 @@
       <div class="row">
         <div class="col-lg-3  col-md-6 col-sm-6">
           <div class="single-footer-widget">
-            <h6>ASITI</h6>
+            <h6>FLISOL Huehuetenango</h6>
             <p>
-              Asociación de Innovación Tecnológica e Informática
+              Festival Latinoamericano de Instalación de Software Libre
             </p>
           </div>
         </div>
@@ -1164,7 +1152,7 @@
           <div class="single-footer-widget">
             <h6>Boletín de noticias</h6>
             <p>
-              Mantente informado de los eventos de ASITI
+              Mantente informado sobre FLISOL y eventos de software libre
             </p>								
             <div id="mc_embed_signup">
               

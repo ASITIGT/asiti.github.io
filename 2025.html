@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ASITI 2025 - Congreso Online de Tecnología y Seguridad Informática</title>
+	<link rel="icon" href="img/Fevicon.png" type="image/png">
+
+  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/flat-icon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Script para header compartido -->
+  <script src="js/shared-header.js"></script>
+  
+  <!-- Estilos personalizados para redes sociales -->
+  <style>
+    .social-media .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white !important;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      color: white !important;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .social-links {
+        gap: 10px;
+      }
+      .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+    
+    /* Estilos para tarjetas de speakers */
+    .card-speaker {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .card-speaker:hover {
+      transform: translateY(-10px);
+    }
+    
+    .card-speaker .card-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: top center;
+    }
+    
+    /* Estilos para modal de speakers */
+    .speaker-modal .modal-content {
+      border-radius: 15px;
+      border: none;
+    }
+    
+    .speaker-modal .modal-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 15px 15px 0 0;
+      border: none;
+      padding: 20px 30px;
+    }
+    
+    .speaker-modal .modal-body {
+      padding: 30px;
+    }
+    
+    .speaker-modal .speaker-info-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 5px solid #667eea;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    
+    .speaker-modal .speaker-detail h5 {
+      color: #667eea;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body ng-app="ASITI">
+
+  <!--================ Header Menu Area start =================-->
+  <div id="shared-header">
+    <!-- El header se carga aquí dinámicamente -->
+    <header class="header_area">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
+            <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+              <ul class="nav navbar-nav menu_nav justify-content-end">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
+                <li class="nav-item"><a class="nav-link" href="index.html#section_speakers">Speakers</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#section_crono">Cronograma</a></li>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eventos Anteriores</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="2023.html">ASITI 2023</a></li>
+                    <li class="nav-item"><a class="nav-link" href="2025.html">ASITI 2025</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div> 
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <!--================ Header Menu Area =================-->
+
+  
+  <!--================Hero Banner Area Start =================-->
+  <section class="hero-banner">
+    <div class="container text-center">
+      <span class="hero-banner-icon"><i class="flaticon-sing"></i></span>
+      <p>16 de Noviembre, 2025</p>
+      <h1>CONGRESO ONLINE DE TECNOLOGÍA Y SEGURIDAD INFORMÁTICA</h1>
+      <p>📌 Modalidad: Online</p>
+      <a class="button button-header mt-4" href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank">Inscríbete al Evento</a>
+      
+      <!-- Redes Sociales -->
+      <div class="social-media mt-4">
+        <p class="text-white mb-3">Síguenos en nuestras redes sociales:</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/ASITIH" target="_blank" class="social-link mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/AsitiHuehue" target="_blank" class="social-link mx-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/asitihuehue7/" target="_blank" class="social-link mx-2">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@asitihuehuetenango1524/streams" target="_blank" class="social-link mx-2">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/asitihuehue/" target="_blank" class="social-link mx-2">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="http://t.me/asitihuehue" target="_blank" class="social-link mx-2">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================Hero Banner Area End =================-->
+
+
+  <!--================ Innovation section Start =================-->
+  <section class="section-padding--small bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center mb-5 mb-lg-0">
+          <div class="innovative-wrapper">
+            <h3 class="primary-text">ASITI 2025 <br class="d-none d-xl-block"> Online</h3>
+            <p class="h4 primary-text2 mb-3">Evento Gratuito!!</p>
+            <p>La Asociación de Innovación Tecnológica e Informática -ASITI-, tenemos el agrado de hacerle la cordial invitación a este gran evento y agradecerle de antemano por su preferencia y participación.</p>
+            <br>
+            <p>Este evento va dirigido a todos los amantes de la Innovación Tecnológica y la Seguridad Informática, tenemos el privilegio de contar con ponentes reconocidos y apasionados por lo que hacen.</p>
+            <br>
+            <ul>
+              <li>Se dará diploma digital de participación.</li>
+              <li>Durante el evento se estará enviando link para confirmar asistencia.</li>
+              <li>Se estará enviando el diploma 5 días después del evento.</li>
+              <li>Se estará enviando el link de transmisión al correo proporcionado en el formulario.</li>
+              <li><strong>Registro:</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank">Formulario de Inscripción</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 pl-xl-5">
+
+          <ul class="clockdiv text-center" id="clockdiv">
+            <li class="clockdiv-single clockdiv-day">
+              <h1 class="days" id="down_days"></h1>
+              <span class="smalltext">Dias</span>
+            </li>
+            <li class="clockdiv-single clockdiv-hour">
+              <h1 class="hours" id="down_hours"></h1>
+              <span class="smalltext">Horas</span>
+            </li>
+            <li class="clockdiv-single clockdiv-minute">
+              <h1 class="minutes" id="down_minutes"></h1>
+              <span class="smalltext">Mins</span>
+            </li>
+          </ul>
+          
+          <div class="clockdiv-content text-center">
+            <p class="h4 primary-text2 mb-2" id="demo_hour">16 de Noviembre de 2025</p>
+            <p class="h5 primary-text mb-2">🕐 Hora de Guatemala: 09:00am - 13:00hrs (GMT-6)</p>
+            <a class="button button-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank">Registro</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Innovation section End =================-->
+
+
+  <!--================ Join section Start =================-->
+  <!-- <section class="section-margin">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Why Join Ummet</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+
+      <div class="d-lg-flex justify-content-between">
+        <div class="card-feature mb-5 mb-lg-0">
+          <div class="feature-icon">
+            <i class="flaticon-prize"></i>
+          </div>
+          <h3>Always First Service</h3>
+          <p>His likeness beast moved domini moved above meat all fly blessed greater creepeth you itself living room </p>
+        </div>
+
+        <div class="card-feature mb-5 mb-lg-0">
+          <div class="feature-icon">
+            <i class="flaticon-earth-globe"></i>
+          </div>
+          <h3>International Business</h3>
+          <p>His likeness beast moved domini moved above meat all fly blessed greater creepeth you itself living room </p>
+        </div>
+
+        <div class="card-feature mb-5 mb-lg-0">
+          <div class="feature-icon">
+            <i class="flaticon-sing"></i>
+          </div>
+          <h3>World Great Speaker</h3>
+          <p>His likeness beast moved domini moved above meat all fly blessed greater creepeth you itself living room </p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <a class="button mr-3 mb-2" href="#">Learn More</a>
+          <a class="button mb-2" href="#">Buy Ticket</a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Join section End =================-->
+
+
+  <!--================ Speaker section Start =================-->
+  <div id="section_speakers"></div>
+  <section class="speaker-bg section-padding" >
+    <div class="container">
+      <div class="section-intro section-intro-white text-center pb-98px">
+        <p class="section-intro__title">ASITI ONLINE 2025</p>
+        <h2 class="primary-text">Conoce a nuestros Speakers</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row">
+        <!-- Mario García -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalMario">
+            <img class="card-img rounded-0" src="img/home/2025/mario-garcia.jpg" alt="Mario García">
+            <div class="speaker-footer">
+              <h4>Mario García</h4>
+              <p>Desarrollador de Software</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <li><a href="https://linkedin.com/in/mariogmd" target="_blank"><i class="ti-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Andrés Alonzo (Lexo) -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalAndres">
+            <img class="card-img rounded-0" src="img/home/2025/andres-alonzo.jpg" alt="Andrés Alonzo">
+            <div class="speaker-footer">
+              <h4>Andrés Alonzo (Lexo)</h4>
+              <p>Senior Cloud Engineer</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <li><a href="https://github.com/aalonzolu" target="_blank"><i class="ti-github"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daniel Camey -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalDaniel">
+            <img class="card-img rounded-0" src="img/home/2025/camey.jpg" alt="Daniel Camey">
+            <div class="speaker-footer">
+              <h4>Daniel Camey</h4>
+              <p>ICS/OT & Cybersecurity technician</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <li><a href="https://linkedin.com/in/drelax-conexion" target="_blank"><i class="ti-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diego Porras -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalDiego">
+            <img class="card-img rounded-0" src="img/home/2025/dporras.jpg" alt="Diego Porras">
+            <div class="speaker-footer">
+              <h4>Diego Porras</h4>
+              <p>Security Engineer - Amazon Devices</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <li><a href="https://linkedin.com/company/htb-gt" target="_blank"><i class="ti-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Camilo Ernesto Losada -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalCamilo">
+            <img class="card-img rounded-0" src="img/home/2025/camilo.jpg" alt="Camilo Ernesto Losada">
+            <div class="speaker-footer">
+              <h4>Camilo Ernesto Losada</h4>
+              <p>Especialista en Seguridad Informática</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <li><a href="#" target="_blank"><i class="ti-world"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galoget Latorre -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker" data-toggle="modal" data-target="#speakerModalGaloget">
+            <img class="card-img rounded-0" src="img/home/2025/galoget.jpg" alt="Galoget Latorre">
+            <div class="speaker-footer">
+              <h4>Galoget Latorre</h4>
+              <p>Senior Penetration Tester & Security Engineer</p>
+            </div>
+            <div class="speaker-overlay">
+              <ul class="speaker-social">
+                <li><a href="https://linkedin.com/in/galoget" target="_blank"><i class="ti-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!--================ Speaker section End =================-->
+
+  <!-- Modal Mario García -->
+  <div class="modal fade speaker-modal" id="speakerModalMario" tabindex="-1" role="dialog" aria-labelledby="speakerModalMarioLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="speakerModalMarioLabel">Mario García</h3>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="img/home/2025/mario-garcia.jpg" alt="Mario García" class="speaker-info-img">
+              <h5>Mario García</h5>
+              <p class="text-muted">Desarrollador de Software</p>
+              <a href="https://linkedin.com/in/mariogmd" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
+                <i class="ti-linkedin"></i> LinkedIn
+              </a>
+            </div>
+            <div class="col-md-8 speaker-detail">
+              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
+              <h4 class="text-primary">WordPress al estilo GitOps: Tu entorno de desarrollo local en Kubernetes</h4>
+              
+              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
+              <p>En esta charla, Mario García compartirá su experiencia en la implementación de entornos de desarrollo local para WordPress utilizando Kubernetes y prácticas GitOps, permitiendo a los desarrolladores tener ambientes consistentes, escalables y fáciles de gestionar.</p>
+              
+              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
+              <ul class="list-unstyled">
+                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
+                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
+                <li><strong>Modalidad:</strong> Online</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Andrés Alonzo -->
+  <div class="modal fade speaker-modal" id="speakerModalAndres" tabindex="-1" role="dialog" aria-labelledby="speakerModalAndresLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="speakerModalAndresLabel">Andrés Alonzo (Lexo)</h3>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="img/home/2025/andres-alonzo.jpg" alt="Andrés Alonzo" class="speaker-info-img">
+              <h5>Andrés Alonzo (Lexo)</h5>
+              <p class="text-muted">Senior Cloud Engineer</p>
+              <a href="https://github.com/aalonzolu" target="_blank" class="btn btn-sm btn-outline-dark mt-2">
+                <i class="ti-github"></i> GitHub
+              </a>
+            </div>
+            <div class="col-md-8 speaker-detail">
+              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
+              <h4 class="text-primary">MCP: Herramientas para la IA</h4>
+              
+              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
+              <p>Andrés Alonzo (Lexo) nos introducirá al Model Context Protocol (MCP), explorando cómo esta tecnología está revolucionando la forma en que las herramientas de inteligencia artificial interactúan y se integran en diferentes sistemas y aplicaciones modernas.</p>
+              
+              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
+              <p>Senior Cloud Engineer con amplia experiencia en arquitecturas cloud y soluciones de inteligencia artificial.</p>
+              
+              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
+              <ul class="list-unstyled">
+                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
+                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
+                <li><strong>Modalidad:</strong> Online</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Daniel Camey -->
+  <div class="modal fade speaker-modal" id="speakerModalDaniel" tabindex="-1" role="dialog" aria-labelledby="speakerModalDanielLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="speakerModalDanielLabel">Daniel Camey</h3>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="img/home/2025/camey.jpg" alt="Daniel Camey" class="speaker-info-img">
+              <h5>Daniel Camey</h5>
+              <p class="text-muted">ICS/OT & Cybersecurity technician</p>
+              <a href="https://linkedin.com/in/drelax-conexion" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
+                <i class="ti-linkedin"></i> LinkedIn
+              </a>
+            </div>
+            <div class="col-md-8 speaker-detail">
+              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
+              <h4 class="text-primary">Riesgos en protocolos de comunicación OT/IOT</h4>
+              
+              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
+              <p>Daniel Camey explorará los riesgos de seguridad presentes en los protocolos de comunicación utilizados en Tecnología Operacional (OT) e Internet de las Cosas (IoT), abordando las vulnerabilidades críticas y mejores prácticas para proteger sistemas industriales y dispositivos conectados.</p>
+              
+              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
+              <p>Técnico especializado en Sistemas de Control Industrial (ICS/OT) y Ciberseguridad, con experiencia en la protección de infraestructuras críticas y sistemas industriales.</p>
+              
+              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
+              <ul class="list-unstyled">
+                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
+                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
+                <li><strong>Modalidad:</strong> Online</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Diego Porras -->
+  <div class="modal fade speaker-modal" id="speakerModalDiego" tabindex="-1" role="dialog" aria-labelledby="speakerModalDiegoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="speakerModalDiegoLabel">Diego Porras</h3>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="img/home/2025/dporras.jpg" alt="Diego Porras" class="speaker-info-img">
+              <h5>Diego Porras</h5>
+              <p class="text-muted">Security Engineer - Amazon Devices</p>
+              <p class="text-muted small">(Kuiper/Eero)</p>
+              <a href="https://linkedin.com/company/htb-gt" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
+                <i class="ti-linkedin"></i> LinkedIn
+              </a>
+            </div>
+            <div class="col-md-8 speaker-detail">
+              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
+              <h4 class="text-primary">Amazon, Google, Okta? No hay límites para los latinos.</h4>
+              
+              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
+              <p>Diego Porras compartirá su experiencia trabajando en empresas tecnológicas de clase mundial como Amazon, demostrando que no hay límites para los profesionales latinos en la industria tech global. Una charla inspiradora sobre oportunidades, superación y desarrollo profesional.</p>
+              
+              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
+              <p>Security Engineer en Amazon Devices (Kuiper/Eero), con experiencia en seguridad de dispositivos y sistemas a gran escala en empresas líderes de la industria tecnológica.</p>
+              
+              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
+              <ul class="list-unstyled">
+                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
+                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
+                <li><strong>Modalidad:</strong> Online</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Camilo Ernesto Losada -->
+  <div class="modal fade speaker-modal" id="speakerModalCamilo" tabindex="-1" role="dialog" aria-labelledby="speakerModalCamiloLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="speakerModalCamiloLabel">Camilo Ernesto Losada</h3>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="img/home/2025/camilo.jpg" alt="Camilo Ernesto Losada" class="speaker-info-img">
+              <h5>Camilo Ernesto Losada</h5>
+              <p class="text-muted">Especialista en Seguridad Informática</p>
+              <p class="text-muted small">Consejo de Estado - Rama Judicial</p>
+            </div>
+            <div class="col-md-8 speaker-detail">
+              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
+              <h4 class="text-primary">El Mercado global del Ciberdelito 2025 - conociendo el lado oscuro</h4>
+              
+              <h5 class="mt-4"><i class="ti-clock"></i> Horario</h5>
+              <p><strong>12:15 PM (GMT-6)</strong></p>
+              
+              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
+              <p>Ingeniero, especialista de seguridad informática de la UNAD y maestro de ciberseguridad de la Universidad Internacional de Valencia. Con más de 20 años de experiencia en el sector público trabajando en áreas de TI, seguridad e infraestructura, actualmente se desempeña como profesional en seguridad de la información en el Consejo de Estado de la Rama Judicial.</p>
+              <p>Ha pertenecido a varias comunidades de Software Libre desde el 2002, colaborando como promotor, organizador y conferencista en distintos eventos de Software Libre en Colombia.</p>
+              
+              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
+              <ul class="list-unstyled">
+                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
+                <li><strong>Horario General:</strong> 09:00am - 13:00hrs (GMT-6)</li>
+                <li><strong>Modalidad:</strong> Online</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Galoget Latorre -->
+  <div class="modal fade speaker-modal" id="speakerModalGaloget" tabindex="-1" role="dialog" aria-labelledby="speakerModalGalogetLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="speakerModalGalogetLabel">Galoget Latorre</h3>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="img/home/2025/galoget.jpg" alt="Galoget Latorre" class="speaker-info-img">
+              <h5>Galoget Latorre</h5>
+              <p class="text-muted">Senior Security Engineer</p>
+              <p class="text-muted small">(AppSec & OffSec)</p>
+              <a href="https://linkedin.com/in/galoget" target="_blank" class="btn btn-sm btn-outline-primary mt-2">
+                <i class="ti-linkedin"></i> LinkedIn
+              </a>
+              <div class="mt-3">
+                <span class="badge badge-primary mb-1">OSCP</span>
+                <span class="badge badge-primary mb-1">CEH Practical</span>
+                <span class="badge badge-primary mb-1">eWPTX</span>
+                <span class="badge badge-success mb-1">Top 1% TryHackMe</span>
+              </div>
+            </div>
+            <div class="col-md-8 speaker-detail">
+              <h5><i class="ti-microphone"></i> Tema de la Ponencia</h5>
+              <h4 class="text-primary">AI-Assisted Malware Analysis with LLMs</h4>
+              
+              <h5 class="mt-4"><i class="ti-info-alt"></i> Sobre la Ponencia</h5>
+              <p>El análisis de malware y la ingeniería inversa se están volviendo cada vez más complejos, ya que los atacantes utilizan binarios ofuscados, packers y técnicas avanzadas de evasión.</p>
+              <p>En esta sesión hablaremos de varias herramientas, entre ellas <strong>GhidraMCP</strong>, una extensión de código abierto que integra Modelos de Lenguaje de Gran Escala (LLMs) en Ghidra para potenciar tu flujo de trabajo de reverse engineering.</p>
+              <p>Descubre cómo GhidraMCP puede explicar funciones, renombrar símbolos ofuscados, resumir código desensamblado, sugerir reglas YARA e incluso redactar informes, todo impulsado por IA. La charla incluirá demostraciones en vivo, muestras reales de malware y un análisis profundo de la arquitectura y limitaciones de los LLMs en el contexto del análisis binario.</p>
+              
+              <h5 class="mt-4"><i class="ti-user"></i> Sobre el Speaker</h5>
+              <p><strong>Ingeniero en Sistemas</strong> graduado con honores (Cum Laude) de la Escuela Politécnica Nacional (EPN), actualmente culminando <strong>Maestría en Ciberseguridad en Georgia Institute of Technology</strong> (Top 2 en EE.UU.).</p>
+              
+              <p><strong>Senior Penetration Tester</strong> y <strong>Application Security Engineer</strong> con experiencia liderando evaluaciones de seguridad para instituciones financieras, ISPs y empresas globales. Autor de exploits publicados en Exploit-DB y <strong>Top 1% mundial en TryHackMe</strong>.</p>
+
+              <p><strong>Certificaciones:</strong> OSCP, OSWP, CEH Practical, eWPTX, eCPPT, eCXD, HTB AWS/GCP/Azure, SWIFT CSP Expert, entre otras.</p>
+
+              <p><strong>Instructor y conferencista internacional</strong>, colaborando con instituciones como CEC-EPN, Capacitación USACH y Skillnest. Participante destacado en CTFs: DEF CON AppSec Village 2025, Amazon AppSec CTF 2025, Google CTF Mini 2022.</p>
+              
+              <h5 class="mt-4"><i class="ti-calendar"></i> Información del Evento</h5>
+              <ul class="list-unstyled">
+                <li><strong>Fecha:</strong> 16 de Noviembre, 2025</li>
+                <li><strong>Horario:</strong> 09:00am - 13:00hrs (GMT-6)</li>
+                <li><strong>Modalidad:</strong> Online</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNYVH9FJ_I8haRtYfKl276suO6tgH20bsEwbLOUVwrKKVqDw/viewform?pli=1" target="_blank" class="btn btn-primary">Registrarse al Evento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--================ Schedule section Start =================-->
+  <div id="section_crono"></div>
+  <section class="section-margin mb-5 pb-5">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">ASITI 2025</p>
+        <h2 class="primary-text">Cronograma</h2>
+        <img src="img/home/section-style.png" alt="">
+        <p class="mt-4"><em>El cronograma detallado se publicará próximamente junto con el anuncio de los speakers.</em></p>
+        
+        <div class="mt-5 p-4" style="background-color: #f8f9fa; border-radius: 10px;">
+          <h4 class="text-primary">Información General del Evento</h4>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <p><strong>📅 Fecha:</strong> 16 de Noviembre, 2025</p>
+              <p><strong>🕐 Horario:</strong> 09:00am - 13:00hrs (GMT-6)</p>
+            </div>
+            <div class="col-md-6">
+              <p><strong>🌐 Modalidad:</strong> Online</p>
+              <p><strong>💰 Costo:</strong> Gratuito</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="section-margin mb-5 pb-5"  ng-controller="eventSchedule">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">ASITI 2023</p>
+        <h2 class="primary-text">Cronograma de temas</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row">
+        <div class="col-xl-10 offset-xl-1">
+          <div class="scheduleTab">
+            <ul class="nav nav-tabs">
+              <li class="nav-item text-center">
+                <a data-toggle="tab" href="#day1">
+                  <h4>Dia 1</h4>
+                  <p>24 Septiembre, 2023</p>
+                </a>
+              </li>
+
+            </ul>
+          
+            <div class="tab-content">
+              <div id="day1" class="tab-pane active">
+                
+                <div class="schedule-card" ng-repeat="item in temas | orderBy: 'time'">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img ng-src="{{item.img}}" alt="">
+                        <h3>{{item.name}}</h3>
+                        <p>{{item.subject}}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date" style="font-size: 1.5em;">{{item.time}}</p>
+                        <a class="schedule-title" href="#">
+                          <h3>{{item.subject}}</h3>
+                        </a>
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Schedule section End =================-->
+
+
+  <!--================ PriceTable section Start =================-->
+  <!-- <section class="section-padding bg-gray">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Choose Your Ticket</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="text-center card-priceTable">
+            <div class="priceTable-header">
+              <h3>Normal</h3>
+              <p>Attend only first day</p>
+              <h1 class="priceTable-price"><span>$</span> 45.00</h1>
+            </div>
+            <ul class="priceTable-list">
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Unlimited Entrance
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Comfortable Seat
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Paid Certificate
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> Day One Workshop
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> One Certificate
+              </li>
+            </ul>
+            <div class="priceTable-footer">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="text-center card-priceTable">
+            <div class="priceTable-header">
+              <h3>Advance</h3>
+              <p>Attend only first day</p>
+              <h1 class="priceTable-price"><span>$</span> 50.00</h1>
+            </div>
+            <ul class="priceTable-list">
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Unlimited Entrance
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Comfortable Seat
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Paid Certificate
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> Day One Workshop
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> One Certificate
+              </li>
+            </ul>
+            <div class="priceTable-footer">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="text-center card-priceTable">
+            <div class="priceTable-header">
+              <h3>Ultimate</h3>
+              <p>Attend only first day</p>
+              <h1 class="priceTable-price"><span>$</span> 60.00</h1>
+            </div>
+            <ul class="priceTable-list">
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Unlimited Entrance
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Comfortable Seat
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Paid Certificate
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> Day One Workshop
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> One Certificate
+              </li>
+            </ul>
+            <div class="priceTable-footer">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ PriceTable section End =================-->
+
+
+  <!--================ Contact and Sponsor section Start =================-->
+  <section class="section-padding--small sponsor-bg">
+    <div class="container">
+      <div class="section-intro text-center pb-80px">
+        <p class="section-intro__title">Información de Contacto</p>
+        <h2 class="primary-text">Canal de Contacto e Informes</h2>
+        <img src="img/home/section-style.png" alt="">
+        <p class="text-white mt-4">
+          📩 <a href="mailto:asitiguatemala@gmail.com" class="text-warning">asitiguatemala@gmail.com</a>
+        </p>
+      </div>
+      
+      <div class="section-intro text-center pb-80px mt-5">
+        <h2 class="primary-text" style="color: #764ba2;">Patrocinadores</h2>
+        <div class="mt-4 p-4" style="background-color: rgba(255, 255, 255, 0.95); border-radius: 15px; max-width: 600px; margin: 0 auto; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+          <i class="fa fa-handshake" style="font-size: 48px; color: #667eea; margin-bottom: 20px;"></i>
+          <h4 style="color: #333; margin-bottom: 15px;">¿Quieres ser patrocinador?</h4>
+          <p style="color: #666; margin-bottom: 20px;">
+            Únete a este evento y apoya a la comunidad tecnológica de Guatemala.<br>
+            Contáctanos para conocer las oportunidades de patrocinio.
+          </p>
+          <a href="mailto:asitiguatemala@gmail.com?subject=Patrocinio ASITI 2025" class="button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; display: inline-block; transition: all 0.3s;">
+            <i class="fa fa-envelope"></i> Contactar para Patrocinio
+          </a>
+        </div>
+      </div>
+
+      <!-- Patrocinadores para 2025 serán anunciados próximamente -->
+      
+      <!-- 
+      <div class="sponsor-wrapper sponsor-wrapper--small">
+        <h3 class="sponsor-title mb-5">Silver Sponsor</h3>
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor-sm-1.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor-sm-2.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor-sm-3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <!--================ Sponsor section End =================-->
+
+  <!--================ Gallery section Start =================-->
+  <!-- <section class="section-padding gallery-area gallery-bg">
+    <div class="container">
+      <div class="section-intro section-intro-white text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Event Plan Sponsors</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g1.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g1.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g2.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g2.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g3.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g3.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g4.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g4.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g5.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g5.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g6.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g6.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Gallery section End =================-->
+
+
+  <!--================ Blog section Start =================-->
+  <!-- <section class="section-margin">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Why Join Ummet</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="owl-theme owl-carousel blogCarousel pb-xl-1">
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog1.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog2.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog1.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog2.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Blog section End =================-->
+
+
+  <!-- ================ start footer Area ================= -->
+  <footer class="footer-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>ASITI</h6>
+            <p>
+              Asociación de Innovación Tecnológica e Informática
+            </p>
+          </div>
+        </div>
+        <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Navigation Links</h6>
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Feature</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>										
+            </div>							
+          </div>
+        </div>							 -->
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Boletín de noticias</h6>
+            <p>
+              Mantente informado de los eventos de ASITI
+            </p>								
+            <div id="mc_embed_signup">
+              
+              <!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+  <form action="https://asiti.us10.list-manage.com/subscribe/post?u=c869f545fe19e887db81fad37&amp;id=9075d8f281" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+    
+        <div class="input-group d-flex flex-row">
+    <input type="email" value="" placeholder="Correo electrónico"  name="EMAIL"onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo electrónico '"  class="required email" id="mce-EMAIL">
+    <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn bb-btn"><span class="lnr lnr-location"></span></button>
+  </div>
+    <div id="mce-responses" class="clear">
+      <div class="response" id="mce-error-response" style="display:none"></div>
+      <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c869f545fe19e887db81fad37_9075d8f281" tabindex="-1" value=""></div>
+      <!-- <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div> -->
+      
+      </div>
+  </form>
+  </div>
+  
+  <!--End mc_embed_signup-->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget mail-chimp">
+            <!-- <h6 class="mb-20">InstaFeed</h6>
+            <ul class="instafeed d-flex flex-wrap">
+              <li><img src="img/instagram/i1.jpg" alt=""></li>
+              <li><img src="img/instagram/i2.jpg" alt=""></li>
+              <li><img src="img/instagram/i3.jpg" alt=""></li>
+              <li><img src="img/instagram/i4.jpg" alt=""></li>
+              <li><img src="img/instagram/i5.jpg" alt=""></li>
+              <li><img src="img/instagram/i6.jpg" alt=""></li>
+              <li><img src="img/instagram/i7.jpg" alt=""></li>
+              <li><img src="img/instagram/i8.jpg" alt=""></li>
+            </ul> -->
+          </div>
+        </div>						
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <p class="col-lg-8 col-sm-12 footer-text m-0 text-center text-lg-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          <div class="col-lg-4 col-sm-12 footer-social text-center text-lg-right">
+            <a href="https://www.facebook.com/ASITIH" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AsitiHuehue" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/asitihuehue7/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@asitihuehuetenango1524/streams" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/asitihuehue/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="http://t.me/asitihuehue" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ================ End footer Area ================= -->
+
+
+
+
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/mail-script.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>	
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>	
+  <script src="js/main.js"></script>
+  <script src="js/controller.js?y"></script>
+
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v7.0'
+      });
+    };
+
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="493557597417834"
+theme_color="#0084ff"
+logged_in_greeting="Hola! envíanos un mensaje."
+logged_out_greeting="Hola! envíanos un mensaje.">
+  </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150062837-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150062837-1');
+</script>
+
+</body>
+</html>
