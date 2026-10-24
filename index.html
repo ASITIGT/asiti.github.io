@@ -1,488 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>ASITI 2026 - Congreso Anual de Tecnología | ASITI Huehuetenango</title>
-	<link rel="icon" href="img/Fevicon.png" type="image/png">
-
-  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
-  <link rel="stylesheet" href="vendors/linericon/style.css">
-  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
-  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="vendors/flat-icon/font/flaticon.css">
-
-  <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Script para header compartido -->
-  <script src="js/shared-header.js"></script>
-  
-  <!-- Estilos personalizados para redes sociales -->
-  <style>
-    .social-media .social-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-    
-    .social-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 45px;
-      height: 45px;
-      background: rgba(255, 255, 255, 0.1);
-      color: white !important;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 18px;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .social-link:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      color: white !important;
-      text-decoration: none;
-    }
-    
-    @media (max-width: 768px) {
-      .social-links {
-        gap: 10px;
-      }
-      .social-link {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-      }
-    }
-    
-    /* Estilos para tarjetas de speakers */
-    .card-speaker {
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .card-speaker:hover {
-      transform: translateY(-10px);
-    }
-    
-    .card-speaker .card-img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      object-position: top center;
-    }
-    
-    /* Estilos para modal de speakers */
-    .speaker-modal .modal-content {
-      border-radius: 15px;
-      border: none;
-    }
-    
-    .speaker-modal .modal-header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      border-radius: 15px 15px 0 0;
-      border: none;
-      padding: 20px 30px;
-    }
-    
-    .speaker-modal .modal-body {
-      padding: 30px;
-    }
-    
-    .speaker-modal .speaker-info-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top center;
-      border: 5px solid #667eea;
-      margin: 0 auto 20px;
-      display: block;
-    }
-    
-    .speaker-modal .speaker-detail h5 {
-      color: #667eea;
-      font-weight: 600;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-    
-    /* Estilos para agenda compacta */
-    .time-small {
-      font-size: 10px;
-      font-weight: bold;
-      color: #6c757d;
-      min-width: 35px;
-    }
-    
-    .badge-sm {
-      font-size: 9px;
-      padding: 3px 6px;
-    }
-    
-    .event-item h6 {
-      font-weight: 600;
-      color: #333;
-    }
-    
-    .time-block {
-      height: 100%;
-    }
-    
-    @media (max-width: 768px) {
-      .agenda-compact .col-md-3 {
-        margin-bottom: 15px;
-      }
-      
-      .time-header {
-        font-size: 12px !important;
-      }
-      
-      .event-item h6 {
-        font-size: 12px !important;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASITI 2026 · Congreso anual de tecnología</title>
+  <meta name="description" content="ASITI 2026, el congreso anual de tecnología de la Asociación de Innovación Tecnológica e Informática. Ayúdanos a decidir si es online o presencial en Huehuetenango.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="ASITI 2026 · ¡Ayúdanos a decidir cómo será!">
+  <meta property="og:description" content="¿Online o presencial en Huehuetenango? Vota en el sondeo, solo toma 1 minuto.">
+  <meta property="og:url" content="https://asiti.io.gt/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://asiti.io.gt/img/og-asiti2026.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="img/Fevicon.png" type="image/png">
+  <link rel="preload" href="fonts/poppins-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
-<body ng-app="ASITI">
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
 
-  <!--================ Header Menu Area start =================-->
-  <div id="shared-header">
-    <!-- El header se carga aquí dinámicamente -->
-    <header class="header_area">
-      <div class="main_menu">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container box_1620">
-            <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-              <ul class="nav navbar-nav menu_nav justify-content-end">
-                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
-                <li class="nav-item"><a class="nav-link" href="https://ir.gt/asiti2026" target="_blank">Sondeo ASITI 2026</a></li>
-                <li class="nav-item submenu dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eventos Anteriores</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item"><a class="nav-link" href="2023.html">ASITI 2023</a></li>                  
-                    <li class="nav-item"><a class="nav-link" href="2025.html">ASITI 2025</a></li>                  
-                    <li class="nav-item"><a class="nav-link" href="flisol2026.html">FLISOL 2026</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div> 
-          </div>
-        </nav>
-      </div>
-    </header>
-  </div>
-  <!--================Header Menu Area =================-->
-
-  
-  <!--================Hero Banner Area Start =================-->
-  <section class="hero-banner">
-    <div class="container text-center">
-      <span class="hero-banner-icon"><i class="flaticon-sing"></i></span>
-      <p>Finales de noviembre, 2026</p>
-      <h1>ASITI 2026 · CONGRESO ANUAL DE TECNOLOGÍA</h1>
-      <p>📍 ¿Online o presencial en Huehuetenango? ¡Tú decides!</p>
-      <a class="button button-header mt-4" href="https://ir.gt/asiti2026" target="_blank">Responde el sondeo</a>
-
-      <div class="social-media mt-4">
-        <p class="text-white mb-3">Síguenos en nuestras redes sociales:</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/ASITIH" target="_blank" class="social-link mx-2">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://x.com/AsitiHuehue" target="_blank" class="social-link mx-2">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/asitihuehue7/" target="_blank" class="social-link mx-2">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.youtube.com/@asitihuehuetenango1524/streams" target="_blank" class="social-link mx-2">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/asitihuehue/" target="_blank" class="social-link mx-2">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="http://t.me/asitihuehue" target="_blank" class="social-link mx-2">
-            <i class="fab fa-telegram-plane"></i>
-          </a>
-        </div>
-      </div>
+  <header class="nav">
+    <div class="wrap nav__bar">
+      <a class="nav__logo" href="./" aria-label="ASITI, inicio"><img src="img/asiti-logo-2026.webp" width="720" height="281" alt="ASITI, Asociación de Innovación Tecnológica e Informática"></a>
+      <nav aria-label="Principal">
+        <ul class="nav__links">
+          <li><a href="#congreso">El congreso</a></li>
+          <li><a href="#comunidad">Comunidad</a></li>
+          <li><a href="#ponentes">Ponentes</a></li>
+          <li><a href="#archivo">Eventos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--sm" href="https://ir.gt/asiti2026" target="_blank" rel="noopener">Votar</a>
     </div>
-  </section>
-  <!--================Hero Banner Area End =================-->
+  </header>
 
-
-  <!--================ ASITI 2026 section Start =================-->
-  <section class="section-padding--small bg-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center mb-5 mb-lg-0">
-          <div class="innovative-wrapper">
-            <h3 class="primary-text">ASITI 2026 <br class="d-none d-xl-block"> se acerca</h3>
-            <p class="h4 primary-text2 mb-3">Nuestro congreso anual</p>
-            <p>Gracias a todas las personas que han sido parte de los eventos de ASITI, año con año seguimos creando espacios para aprender, compartir y conectar con la comunidad tecnológica de Guatemala.</p>
-            <p>Este año queremos hacer ASITI 2026 a finales de noviembre, con charlas, talleres y mucha comunidad. Antes de definir los detalles queremos saber tu opinión: ¿lo hacemos online o presencial en Huehuetenango?</p>
-            <br>
-            <ul>
-              <li>🎤 Charlas sobre ciberseguridad, inteligencia artificial, desarrollo y software libre</li>
-              <li>🛠️ Talleres prácticos</li>
-              <li>🤝 Comunidad tecnológica de Guatemala</li>
-              <li>🙋 ¿Quieres dar una charla o un taller? Cuéntanos en el sondeo</li>
-            </ul>
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo">
+      <div class="hero__bg" aria-hidden="true">
+        <svg class="blob blob--tl" viewBox="0 0 400 400"><path d="M0 0h320c40 60 30 120-20 160s-120 30-150 90S120 380 40 400H0z"/></svg>
+        <svg class="blob blob--br" viewBox="0 0 400 400"><path d="M400 400H70c-30-70 10-130 70-150s110-40 120-110S320 20 400 0z"/></svg>
+        <svg class="gear" viewBox="0 0 200 200"><path d="M93 10h14l4 22a70 70 0 0 1 17 7l18-13 10 10-13 18a70 70 0 0 1 7 17l22 4v14l-22 4a70 70 0 0 1-7 17l13 18-10 10-18-13a70 70 0 0 1-17 7l-4 22H93l-4-22a70 70 0 0 1-17-7l-18 13-10-10 13-18a70 70 0 0 1-7-17l-22-4V93l22-4a70 70 0 0 1 7-17L44 54l10-10 18 13a70 70 0 0 1 17-7zM100 62a38 38 0 1 0 0 76 38 38 0 0 0 0-76z" fill-rule="evenodd"/></svg>
+        <span class="dots"></span>
+      </div>
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <h1 id="titulo"><span class="h1__name">ASITI 2026</span> <span class="h1__line">¡Ayúdanos a decidir cómo será!</span></h1>
+          <p class="hero__lede">Nuestro congreso anual de tecnología será a finales de noviembre. Si has estado en eventos de ASITI, queremos tu opinión para definir la modalidad, la fecha y los temas.</p>
+          <ul class="facts">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2.5 19h19"/></svg>Modalidad</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13.5h2M12 13.5h2M16 13.5h.01M8 16.5h2M12 16.5h2"/></svg>Fecha</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg>Temas</li>
+          </ul>
+          <p class="question"><strong>¿Online o presencial</strong> en Huehuetenango?</p>
+          <div class="vote">
+            <a class="btn btn--vote" href="https://ir.gt/asiti2026" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h16v7H4zM8 13l4-9 5 3-3 6M7 16.5h10"/></svg>
+              <span><small>Vota aquí</small>ir.gt/asiti2026</span>
+            </a>
+            <p class="vote__note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Sondeo abierto · Solo te toma 1 minuto</p>
           </div>
         </div>
-        <div class="col-lg-6 pl-xl-5 align-self-center">
-          <div class="text-center p-5" style="background: #fff; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-            <p class="h4 primary-text2 mb-2">📋 Sondeo abierto</p>
-            <p class="h5 primary-text mb-2">Fecha, modalidad y lugar por confirmar</p>
-            <p class="mb-4">Ayúdanos a decidir cómo será ASITI 2026. Solo te toma un minuto.</p>
-            <a class="button mb-3" href="https://ir.gt/asiti2026" target="_blank">Dar mi opinión</a>
-            <p class="mb-0">👍 <a href="https://www.facebook.com/ASITIH" target="_blank">Síguenos en Facebook</a> para enterarte primero</p>
+        <div class="hero__aside" aria-hidden="true">
+          <div class="orbit">
+            <span class="orbit__line orbit__line--1"></span>
+            <span class="orbit__line orbit__line--2"></span>
+            <span class="orbit__line orbit__line--3"></span>
+            <span class="orbit__line orbit__line--4"></span>
+            <img class="node node--1" src="img/people/camilo.webp" alt="" width="480" height="480">
+            <img class="node node--2" src="img/people/andres-alonzo.webp" alt="" width="480" height="480">
+            <img class="node node--3" src="img/people/mario-garcia.webp" alt="" width="480" height="480">
+            <img class="node node--4" src="img/people/galoget.webp" alt="" width="480" height="480">
+            <img class="node node--5" src="img/people/camey.webp" alt="" width="480" height="480">
+            <span class="node node--dot node--6"></span>
+            <span class="node node--dot node--7"></span>
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="sec" id="congreso" aria-labelledby="congreso-t">
+      <div class="wrap split">
+        <div>
+          <h2 id="congreso-t">Charlas, talleres y mucha comunidad</h2>
+          <p class="lead">Año con año creamos espacios para aprender, compartir y conectar con la comunidad tecnológica de Guatemala. Este año tú decides cómo lo hacemos.</p>
+          <ul class="topics" aria-label="Temas del sondeo">
+            <li>Ciberseguridad y hacking ético</li>
+            <li>Inteligencia artificial</li>
+            <li>Desarrollo de software</li>
+            <li>Linux y software libre</li>
+            <li>Redes y telefonía IP</li>
+            <li>Robótica, IoT y Arduino</li>
+          </ul>
+        </div>
+        <dl class="card datalist">
+          <div><dt>Fecha</dt><dd>Sábado 21 o sábado 28 de noviembre <span class="tag">Por decidir</span></dd></div>
+          <div><dt>Modalidad</dt><dd>Online o presencial en Huehuetenango <span class="tag">Por decidir</span></dd></div>
+          <div><dt>Sede</dt><dd>Se anuncia junto con la fecha</dd></div>
+          <div><dt>Ponencias</dt><dd>Convocatoria abierta: propón tu charla o taller en el sondeo</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="sec sec--tint" id="comunidad" aria-labelledby="comunidad-t">
+      <div class="wrap split">
+        <div>
+          <h2 id="comunidad-t">Una comunidad de todo el país</h2>
+          <p class="lead">Entre 2020 y 2026, quienes se registraron a eventos de ASITI llegaron desde 20 de los 22 departamentos de Guatemala y desde otros países de la región.</p>
+          <div class="stats">
+            <p><strong>700+</strong><span>inscripciones desde 2020</span></p>
+            <p><strong>20</strong><span>de 22 departamentos</span></p>
+            <p><strong>77</strong><span>registros desde otros países</span></p>
+          </div>
+        </div>
+        <figure class="card bars">
+          <figcaption>Registros por departamento, 2020–2026</figcaption>
+          <ol>
+          <li><span class="bar__name">Huehuetenango</span><span class="bar__track"><span class="bar__fill" style="--v:1.000"></span></span><span class="bar__num">204</span></li>
+          <li><span class="bar__name">Guatemala</span><span class="bar__track"><span class="bar__fill" style="--v:0.181"></span></span><span class="bar__num">37</span></li>
+          <li><span class="bar__name">Quetzaltenango</span><span class="bar__track"><span class="bar__fill" style="--v:0.167"></span></span><span class="bar__num">34</span></li>
+          <li><span class="bar__name">San Marcos</span><span class="bar__track"><span class="bar__fill" style="--v:0.147"></span></span><span class="bar__num">30</span></li>
+          <li><span class="bar__name">Totonicapán</span><span class="bar__track"><span class="bar__fill" style="--v:0.083"></span></span><span class="bar__num">17</span></li>
+          <li><span class="bar__name">Chimaltenango</span><span class="bar__track"><span class="bar__fill" style="--v:0.054"></span></span><span class="bar__num">11</span></li>
+          <li><span class="bar__name">Quiché</span><span class="bar__track"><span class="bar__fill" style="--v:0.049"></span></span><span class="bar__num">10</span></li>
+          <li><span class="bar__name">Sololá</span><span class="bar__track"><span class="bar__fill" style="--v:0.044"></span></span><span class="bar__num">9</span></li>
+          </ol>
+          <p class="bars__src">Fuente: formularios de inscripción y asistencia de ASITI, agrupados por departamento. No incluye datos personales.</p>
+        </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="ponentes" aria-labelledby="ponentes-t">
+      <div class="wrap">
+        <h2 id="ponentes-t">Quienes han compartido en ASITI</h2>
+        <p class="lead">Algunas de las personas que dieron charlas en ASITI 2025.</p>
+        <ul class="people">
+          <li><img src="img/people/andres-alonzo.webp" alt="Andrés Alonzo" width="480" height="480" loading="lazy"><strong>Andrés Alonzo</strong><span>Senior Cloud Engineer</span></li>
+          <li><img src="img/people/camilo.webp" alt="Camilo Ernesto Losada" width="480" height="480" loading="lazy"><strong>Camilo Ernesto Losada</strong><span>Especialista en Seguridad Informática</span></li>
+          <li><img src="img/people/galoget.webp" alt="Galoget Latorre" width="480" height="480" loading="lazy"><strong>Galoget Latorre</strong><span>Senior Penetration Tester</span></li>
+          <li><img src="img/people/camey.webp" alt="Daniel Camey" width="480" height="480" loading="lazy"><strong>Daniel Camey</strong><span>ICS/OT &amp; Cybersecurity</span></li>
+          <li><img src="img/people/mario-garcia.webp" alt="Mario García" width="480" height="480" loading="lazy"><strong>Mario García</strong><span>Desarrollador de Software</span></li>
+        </ul>
+        <p class="cta-line"><a href="https://ir.gt/asiti2026" target="_blank" rel="noopener">¿Quieres dar una charla en 2026? Propónla en el sondeo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="sec sec--tint" id="archivo" aria-labelledby="archivo-t">
+      <div class="wrap">
+        <h2 id="archivo-t">Eventos anteriores</h2>
+        <ul class="events">
+          <li><a href="flisol2026.html"><span class="events__year">2026</span><span class="events__body"><strong>FLISOL Huehuetenango</strong><span>17 de mayo · Presencial · Universidad Da Vinci</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li><a href="2025.html"><span class="events__year">2025</span><span class="events__body"><strong>ASITI 2025</strong><span>16 de noviembre · Online · Tecnología y seguridad informática</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li><a href="2023.html"><span class="events__year">2023</span><span class="events__body"><strong>ASITI 2023</strong><span>24 de septiembre · Presencial · Universidad de Occidente, Huehuetenango</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li><a href="events/asiti2020/"><span class="events__year">2020</span><span class="events__body"><strong>ASITI 2020</strong><span>Online · Diplomas de participación</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+        </ul>
+        <p class="events__since">ASITI organiza eventos de tecnología desde 2016.</p>
+      </div>
+    </section>
+
+    <section class="sec sec--contact" id="contacto" aria-labelledby="contacto-t">
+      <div class="wrap split">
+        <div>
+          <h2 id="contacto-t">Contacto</h2>
+          <p class="lead">Escríbenos para dudas, propuestas o para sumarte a la organización.</p>
+          <a class="mail" href="mailto:asitiguatemala@gmail.com">asitiguatemala@gmail.com</a>
+          <ul class="social" aria-label="Redes sociales">
+            <li><a href="https://www.facebook.com/ASITIH" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14.5 21v-7.5h2.8l.5-3.3h-3.3V8.3c0-.9.4-1.6 1.7-1.6h1.7V3.8a19 19 0 0 0-2.6-.2c-2.6 0-4.3 1.6-4.3 4.5v2.1H8.2v3.3H11V21"/></svg></a></li>
+            <li><a href="https://x.com/AsitiHuehue" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24"><path d="M4 4l6.5 8.6L4.2 20M20 4l-6.3 7.1M4 4h4.6L20 20h-4.6z"/></svg></a></li>
+            <li><a href="https://www.instagram.com/asitihuehue7/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><path d="M17.2 6.8v.01"/></svg></a></li>
+            <li><a href="https://www.youtube.com/@asitihuehuetenango1524/streams" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="M10.2 9.4v5.2l4.4-2.6z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/company/asitihuehue/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><path d="M8 10.5v6M8 7.6v.01M12 16.5v-6M12 13.2c0-1.6 1-2.7 2.4-2.7s2.1 1 2.1 2.7v3.3"/></svg></a></li>
+            <li><a href="https://t.me/asitihuehue" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21 4.2 2.9 11.3l5.8 2.1L18 7.3l-7.2 7.4v5.1l3.2-3.4 4.6 3.4z"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="card sponsor">
+          <h3>¿Quieres patrocinar ASITI 2026?</h3>
+          <p>Con tu apoyo el congreso llega a más estudiantes y profesionales de tecnología de Huehuetenango y de todo el país.</p>
+          <a class="btn" href="mailto:asitiguatemala@gmail.com?subject=Patrocinio%20ASITI%202026">Contactar para patrocinio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div>
+        <img class="foot__logo" src="img/asiti-logo-2026-white.webp" width="720" height="281" alt="ASITI" loading="lazy">
+        <p>Huehuetenango, Guatemala · asiti.io.gt</p>
+      </div>
+      <form action="https://asiti.us10.list-manage.com/subscribe/post?u=c869f545fe19e887db81fad37&amp;id=9075d8f281" method="post" target="_blank" novalidate>
+        <label for="boletin">Recibe avisos de nuestros eventos</label>
+        <div class="foot__field">
+          <input id="boletin" type="email" name="EMAIL" placeholder="tu@correo.com" autocomplete="email" required>
+          <button class="btn btn--sm" type="submit">Suscribirme</button>
+        </div>
+        <div class="hp" aria-hidden="true"><input type="text" name="b_c869f545fe19e887db81fad37_9075d8f281" tabindex="-1" value=""></div>
+      </form>
     </div>
-  </section>
-  <!--================ ASITI 2026 section End =================-->
-
-
-
-  <!--================ Contact and Sponsor section Start =================-->
-  <section class="section-padding--small sponsor-bg">
-    <div class="container">
-      <div class="section-intro text-center pb-80px">
-        <p class="section-intro__title">Información de Contacto</p>
-        <h2 class="primary-text">Canal de Contacto e Informes</h2>
-        <img src="img/home/section-style.png" alt="">
-        <p class="text-white mt-4">
-          📧 <a href="mailto:asitiguatemala@gmail.com" class="text-warning">asitiguatemala@gmail.com</a>
-        </p>
-        <p class="text-white mt-2">
-          🔗 Más información: <a href="https://www.facebook.com/ASITIH" class="text-warning" target="_blank">Facebook ASITI Huehuetenango</a>
-        </p>
-        <p class="text-white mt-2">
-          🌐 Sitio web: <a href="https://asiti.io.gt/" class="text-warning" target="_blank">ASITI</a>
-        </p>
-      </div>
-      
-      <div class="section-intro text-center pb-80px mt-5">
-        <h2 class="primary-text" style="color: #764ba2;">Patrocinadores</h2>
-        <div class="mt-4 p-4" style="background-color: rgba(255, 255, 255, 0.95); border-radius: 15px; max-width: 600px; margin: 0 auto; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-          <i class="fa fa-handshake" style="font-size: 48px; color: #667eea; margin-bottom: 20px;"></i>
-          <h4 style="color: #333; margin-bottom: 15px;">¿Quieres ser patrocinador?</h4>
-          <p style="color: #666; margin-bottom: 20px;">
-            Únete a ASITI 2026 y apoya a la comunidad tecnológica de Guatemala.<br>
-            Contáctanos para conocer las oportunidades de patrocinio.
-          </p>
-          <a href="mailto:asitiguatemala@gmail.com?subject=Patrocinio ASITI 2026" class="button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; display: inline-block; transition: all 0.3s;">
-            <i class="fa fa-envelope"></i> Contactar para Patrocinio
-          </a>
-        </div>
-      </div>
-
-      
-      <!-- 
-      <div class="sponsor-wrapper sponsor-wrapper--small">
-        <h3 class="sponsor-title mb-5">Silver Sponsor</h3>
-        <div class="row">
-          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-            <div class="sponsor-single">
-              <img class="img-fluid" src="img/home/sponsor-sm-1.png" alt="">
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-            <div class="sponsor-single">
-              <img class="img-fluid" src="img/home/sponsor-sm-2.png" alt="">
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
-            <div class="sponsor-single">
-              <img class="img-fluid" src="img/home/sponsor-sm-3.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </div>
-  </section>
-  <!--================ Sponsor section End =================-->
-
-  <!-- ================ start footer Area ================= -->
-  <footer class="footer-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3  col-md-6 col-sm-6">
-          <div class="single-footer-widget">
-            <h6>ASITI Huehuetenango</h6>
-            <p>
-              Asociación de Innovación Tecnológica e Informática
-            </p>
-          </div>
-        </div>
-        <!-- <div class="col-lg-3 col-md-6 col-sm-6">
-          <div class="single-footer-widget">
-            <h6>Navigation Links</h6>
-            <div class="row">
-              <div class="col">
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Feature</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Portfolio</a></li>
-                </ul>
-              </div>
-              <div class="col">
-                <ul>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">Pricing</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </div>										
-            </div>							
-          </div>
-        </div>							 -->
-        <div class="col-lg-3  col-md-6 col-sm-6">
-          <div class="single-footer-widget">
-            <h6>Boletín de noticias</h6>
-            <p>
-              Mantente informado sobre ASITI 2026 y nuestros eventos
-            </p>								
-            <div id="mc_embed_signup">
-              
-              <!-- Begin Mailchimp Signup Form -->
-<div id="mc_embed_signup">
-  <form action="https://asiti.us10.list-manage.com/subscribe/post?u=c869f545fe19e887db81fad37&amp;id=9075d8f281" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-    
-        <div class="input-group d-flex flex-row">
-    <input type="email" value="" placeholder="Correo electrónico"  name="EMAIL"onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo electrónico '"  class="required email" id="mce-EMAIL">
-    <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn bb-btn"><span class="lnr lnr-location"></span></button>
-  </div>
-    <div id="mce-responses" class="clear">
-      <div class="response" id="mce-error-response" style="display:none"></div>
-      <div class="response" id="mce-success-response" style="display:none"></div>
-    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c869f545fe19e887db81fad37_9075d8f281" tabindex="-1" value=""></div>
-      <!-- <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div> -->
-      
-      </div>
-  </form>
-  </div>
-  
-  <!--End mc_embed_signup-->
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3  col-md-6 col-sm-6">
-          <div class="single-footer-widget mail-chimp">
-            <!-- <h6 class="mb-20">InstaFeed</h6>
-            <ul class="instafeed d-flex flex-wrap">
-              <li><img src="img/instagram/i1.jpg" alt=""></li>
-              <li><img src="img/instagram/i2.jpg" alt=""></li>
-              <li><img src="img/instagram/i3.jpg" alt=""></li>
-              <li><img src="img/instagram/i4.jpg" alt=""></li>
-              <li><img src="img/instagram/i5.jpg" alt=""></li>
-              <li><img src="img/instagram/i6.jpg" alt=""></li>
-              <li><img src="img/instagram/i7.jpg" alt=""></li>
-              <li><img src="img/instagram/i8.jpg" alt=""></li>
-            </ul> -->
-          </div>
-        </div>						
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <div class="row align-items-center">
-          <p class="col-lg-8 col-sm-12 footer-text m-0 text-center text-lg-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          <div class="col-lg-4 col-sm-12 footer-social text-center text-lg-right">
-            <a href="https://www.facebook.com/ASITIH" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://x.com/AsitiHuehue" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/asitihuehue7/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@asitihuehuetenango1524/streams" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/company/asitihuehue/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="http://t.me/asitihuehue" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <p class="wrap foot__legal">© 2026 ASITI · Asociación de Innovación Tecnológica e Informática</p>
   </footer>
-  <!-- ================ End footer Area ================= -->
-
-
-
-
-  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>
-  <script src="js/jquery.ajaxchimp.min.js"></script>
-  <script src="js/mail-script.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>	
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>	
-  <script src="js/main.js"></script>
-  <script src="js/controller.js?y"></script>
-
-
-  <!-- Load Facebook SDK for JavaScript -->
-  <div id="fb-root"></div>
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        xfbml            : true,
-        version          : 'v7.0'
-      });
-    };
-
-    (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-
-  <!-- Your Chat Plugin code -->
-  <div class="fb-customerchat"
-    attribution=setup_tool
-    page_id="493557597417834"
-theme_color="#0084ff"
-logged_in_greeting="Hola! envíanos un mensaje."
-logged_out_greeting="Hola! envíanos un mensaje.">
-  </div>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150062837-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-150062837-1');
-</script>
-
 </body>
 </html>
