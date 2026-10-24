@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FLISOL 2026 Huehuetenango - Festival Latinoamericano de Instalación de Software Libre</title>
+	<link rel="icon" href="img/Fevicon.png" type="image/png">
+
+  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="vendors/flat-icon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Script para header compartido -->
+  <script src="js/shared-header.js"></script>
+  
+  <!-- Estilos personalizados para redes sociales -->
+  <style>
+    .social-media .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white !important;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      color: white !important;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .social-links {
+        gap: 10px;
+      }
+      .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+    
+    /* Estilos para tarjetas de speakers */
+    .card-speaker {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .card-speaker:hover {
+      transform: translateY(-10px);
+    }
+    
+    .card-speaker .card-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: top center;
+    }
+    
+    /* Estilos para modal de speakers */
+    .speaker-modal .modal-content {
+      border-radius: 15px;
+      border: none;
+    }
+    
+    .speaker-modal .modal-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 15px 15px 0 0;
+      border: none;
+      padding: 20px 30px;
+    }
+    
+    .speaker-modal .modal-body {
+      padding: 30px;
+    }
+    
+    .speaker-modal .speaker-info-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 5px solid #667eea;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    
+    .speaker-modal .speaker-detail h5 {
+      color: #667eea;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    
+    /* Estilos para agenda compacta */
+    .time-small {
+      font-size: 10px;
+      font-weight: bold;
+      color: #6c757d;
+      min-width: 35px;
+    }
+    
+    .badge-sm {
+      font-size: 9px;
+      padding: 3px 6px;
+    }
+    
+    .event-item h6 {
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .time-block {
+      height: 100%;
+    }
+    
+    @media (max-width: 768px) {
+      .agenda-compact .col-md-3 {
+        margin-bottom: 15px;
+      }
+      
+      .time-header {
+        font-size: 12px !important;
+      }
+      
+      .event-item h6 {
+        font-size: 12px !important;
+      }
+    }
+  </style>
+</head>
+<body ng-app="ASITI">
+
+  <!--================ Header Menu Area start =================-->
+  <div id="shared-header">
+    <!-- El header se carga aquí dinámicamente -->
+    <header class="header_area">
+      <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container box_1620">
+            <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+              <ul class="nav navbar-nav menu_nav justify-content-end">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+                <li class="nav-item"><a class="nav-link" href="#section_speakers">Speakers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section_crono">Cronograma</a></li>
+                <li class="nav-item submenu dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Eventos Anteriores</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link" href="2023.html">ASITI 2023</a></li>                  
+                    <li class="nav-item"><a class="nav-link" href="2025.html">ASITI 2025</a></li>                  
+                  </ul>
+                </li>
+              </ul>
+            </div> 
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <!--================Header Menu Area =================-->
+
+  
+  <!--================Hero Banner Area Start =================-->
+  <section class="hero-banner">
+    <div class="container text-center">
+      <span class="hero-banner-icon"><i class="flaticon-sing"></i></span>
+      <p>17 de Mayo, 2026</p>
+      <h1>FESTIVAL LATINOAMERICANO DE INSTALACIÓN DE SOFTWARE LIBRE</h1>
+      <p>📌 Universidad Da Vinci, Huehuetenango, Guatemala</p>
+      <p class="mt-2">🕐 08:00 - 15:00 hrs</p>
+      <a class="button button-header mt-4" href="https://ir.gt/flisolhuehue" target="_blank">Inscríbete al Evento</a>
+      
+      <!-- Redes Sociales -->
+      <div class="social-media mt-4">
+        <p class="text-white mb-3">Síguenos en nuestras redes sociales:</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/ASITIH" target="_blank" class="social-link mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/AsitiHuehue" target="_blank" class="social-link mx-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/asitihuehue7/" target="_blank" class="social-link mx-2">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@asitihuehuetenango1524/streams" target="_blank" class="social-link mx-2">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/asitihuehue/" target="_blank" class="social-link mx-2">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="http://t.me/asitihuehue" target="_blank" class="social-link mx-2">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================Hero Banner Area End =================-->
+
+
+  <!--================ Innovation section Start =================-->
+  <section class="section-padding--small bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center mb-5 mb-lg-0">
+          <div class="innovative-wrapper">
+            <h3 class="primary-text">FLISOL 2026 <br class="d-none d-xl-block"> Huehuetenango</h3>
+            <p class="h4 primary-text2 mb-3">Evento Gratuito!!</p>
+            <p>El Festival Latinoamericano de Instalación de Software Libre (FLISOL) es un evento internacional que se realiza en toda América Latina. En Huehuetenango te invitamos a ser parte de esta celebración del software libre y open source.</p>
+            <br>
+            <p><strong>📅 Fecha:</strong> 17 de mayo de 2026<br>
+            <strong>🕐 Horario:</strong> 08:00 a 15:00 hrs<br>
+            <strong>📍 Sede:</strong> Universidad Da Vinci<br>
+            <strong>📍 Dirección:</strong> 7, 7ª. Calle 13-70, El Terrero, Zona 4, Huehuetenango</p>
+            <br>
+            <ul>
+              <li>✅ Instalación gratuita de distribuciones GNU/Linux</li>
+              <li>🎤 Charlas sobre software libre y tecnologías abiertas</li>
+              <li>🛠️ Talleres prácticos de pentesting y herramientas open source</li>
+              <li>🤖 Conferencias sobre IA y desarrollo moderno</li>
+              <li>🎓 Apoyo técnico y resolución de dudas</li>
+              <li><strong>📝 Registro:</strong> <a href="https://ir.gt/flisolhuehue" target="_blank">Formulario de Inscripción</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 pl-xl-5">
+
+          <ul class="clockdiv text-center" id="clockdiv">
+            <li class="clockdiv-single clockdiv-day">
+              <h1 class="days" id="down_days"></h1>
+              <span class="smalltext">Dias</span>
+            </li>
+            <li class="clockdiv-single clockdiv-hour">
+              <h1 class="hours" id="down_hours"></h1>
+              <span class="smalltext">Horas</span>
+            </li>
+            <li class="clockdiv-single clockdiv-minute">
+              <h1 class="minutes" id="down_minutes"></h1>
+              <span class="smalltext">Mins</span>
+            </li>
+          </ul>
+          
+          <div class="clockdiv-content text-center">
+            <p class="h4 primary-text2 mb-2" id="demo_hour">17 de Mayo de 2026</p>
+            <p class="h5 primary-text mb-2">📍 Universidad Da Vinci, Huehuetenango</p>
+            <p class="h6 primary-text mb-3">🕐 08:00 - 15:00 hrs</p>
+            <a class="button button-link" href="https://ir.gt/flisolhuehue" target="_blank">Registro</a>
+            <a class="button button-link ml-2" href="https://maps.app.goo.gl/XXyASrLz2Q625TTS6" target="_blank">🗺️ Ubicación</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Innovation section End =================-->
+
+
+  <!--================ Join section Start =================-->
+  <!-- <section class="section-margin">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Why Join Ummet</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+
+      <div class="d-lg-flex justify-content-between">
+        <div class="card-feature mb-5 mb-lg-0">
+          <div class="feature-icon">
+            <i class="flaticon-prize"></i>
+          </div>
+          <h3>Always First Service</h3>
+          <p>His likeness beast moved domini moved above meat all fly blessed greater creepeth you itself living room </p>
+        </div>
+
+        <div class="card-feature mb-5 mb-lg-0">
+          <div class="feature-icon">
+            <i class="flaticon-earth-globe"></i>
+          </div>
+          <h3>International Business</h3>
+          <p>His likeness beast moved domini moved above meat all fly blessed greater creepeth you itself living room </p>
+        </div>
+
+        <div class="card-feature mb-5 mb-lg-0">
+          <div class="feature-icon">
+            <i class="flaticon-sing"></i>
+          </div>
+          <h3>World Great Speaker</h3>
+          <p>His likeness beast moved domini moved above meat all fly blessed greater creepeth you itself living room </p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <a class="button mr-3 mb-2" href="#">Learn More</a>
+          <a class="button mb-2" href="#">Buy Ticket</a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Join section End =================-->
+
+
+  <!--================ Speaker section Start =================-->
+  <div id="section_speakers"></div>
+  <section class="speaker-bg section-padding" >
+    <div class="container">
+      <div class="section-intro section-intro-white text-center pb-98px">
+        <p class="section-intro__title">FLISOL 2026</p>
+        <h2 class="primary-text">Nuestros Speakers</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Miguel Tellez</h4>
+              <p>FLISoL: Tecnología libre para todos</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Luis Estrada</h4>
+              <p>Introducción a Distribuciones GNU/Linux</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Franklin Ramírez</h4>
+              <p>Herramientas Open Source para Pentesting</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Diego Porras</h4>
+              <p>Cómo convertirse en hacker</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Daniel Camey</h4>
+              <p>Análisis de señales RF con SDR</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-users" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Julio Jiménez & Fernando Velásquez</h4>
+              <p>Metadatos con herramientas Open Source</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-users" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Zaqueo Gómez & Andrés Alonzo</h4>
+              <p>Telefonía IP empresarial con Issabel</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Tomás Méndez</h4>
+              <p>Desarrollo moderno con Agentes de IA</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-university" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Universidad Da Vinci</h4>
+              <p>Presentación Institucional</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Meiling Esteban</h4>
+              <p>Arduino con IA</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card-speaker">
+            <div class="speaker-placeholder" style="height: 300px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+              <i class="fas fa-user" style="font-size: 48px;"></i>
+            </div>
+            <div class="speaker-footer">
+              <h4>Sergio Smith</h4>
+              <p>Cómo funcionan los modelos de lenguaje (LLMs)</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!--================ Speaker section End =================-->
+
+  <!-- Modales de speakers removidos para FLISOL 2026 -->
+
+
+  <!--================ Schedule section Start =================-->
+  <div id="section_crono"></div>
+  <section class="section-margin mb-5 pb-5">
+    <div class="container">
+      <div class="section-intro text-center pb-98px agenda-section">
+        <style>
+          /* CSS personalizado para expandir la agenda */
+          .agenda-section {
+            max-width: 100% !important;
+          }
+          .agenda-section .container {
+            max-width: 1200px;
+          }
+          @media (min-width: 1400px) {
+            .agenda-section .container {
+              max-width: 1400px;
+            }
+          }
+        </style>
+        <p class="section-intro__title">FLISOL 2026</p>
+        <h2 class="primary-text">Agenda del Evento</h2>
+        <img src="img/home/section-style.png" alt="">
+        
+        <div class="mt-4">
+          <!-- Agenda mejorada con mejor legibilidad -->
+          <div class="agenda-improved" style="background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+            
+            <!-- Header de la agenda -->
+            <div class="text-center mb-5">
+              <h4 class="mb-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">
+                📅 Agenda del Evento FLISOL 2026
+              </h4>
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="d-flex flex-wrap justify-content-center">
+                    <span class="badge badge-info mx-1 mb-2" style="font-size: 12px; padding: 8px 12px;">🎤 Conferencias</span>
+                    <span class="badge badge-warning mx-1 mb-2" style="font-size: 12px; padding: 8px 12px;">🛠️ Talleres</span>
+                    <span class="badge badge-success mx-1 mb-2" style="font-size: 12px; padding: 8px 12px;">💡 Charlas</span>
+                    <span class="badge badge-secondary mx-1 mb-2" style="font-size: 12px; padding: 8px 12px;">🏛️ Institucional</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline horizontal mejorado -->
+            <div class="timeline-improved">
+              <div class="row">
+                <!-- Columna 1: Mañana (08:00-11:45) -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="time-section">
+                    <div class="time-header text-center p-3 mb-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px;">
+                      <h5 class="mb-0" style="font-size: 16px; font-weight: 600;">🌅 Mañana (08:00 - 11:45)</h5>
+                    </div>
+                    
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #17a2b8; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">08:00</span>
+                        <span class="badge badge-info" style="font-size: 11px;">Bienvenida</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">FLISoL: Tecnología libre para todos</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Miguel Tellez</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">08:30</span>
+                        <span class="badge badge-success" style="font-size: 11px;">Conferencia</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Introducción a GNU/Linux</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Luis Estrada</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #ffc107; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">09:00</span>
+                        <span class="badge badge-warning" style="font-size: 11px;">Taller</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Pentesting con herramientas Open Source</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Franklin Ramírez</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">09:45</span>
+                        <span class="badge badge-success" style="font-size: 11px;">Conferencia</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Cómo ser hacker ético</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Diego Porras</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #ffc107; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">10:30</span>
+                        <span class="badge badge-warning" style="font-size: 11px;">Taller</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Análisis de señales RF con SDR</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Daniel Camey</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #ffc107; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">11:15</span>
+                        <span class="badge badge-warning" style="font-size: 11px;">Taller</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Análisis de metadatos Open Source</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👥 J.Jiménez & F.Velásquez</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Columna 2: Tarde (11:45-15:25) -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                  <div class="time-section">
+                    <div class="time-header text-center p-3 mb-3" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; border-radius: 12px;">
+                      <h5 class="mb-0" style="font-size: 16px; font-weight: 600;">☀️ Tarde (11:45 - 15:25)</h5>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #ffc107; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">11:45</span>
+                        <span class="badge badge-warning" style="font-size: 11px;">Taller</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Telefonía IP con Issabel</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👥 Z.Gómez & A.Alonzo</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">12:30</span>
+                        <span class="badge badge-success" style="font-size: 11px;">Conferencia</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Desarrollo moderno con Agentes de IA</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Tomás Méndez</p>
+                    </div>
+
+                    <!-- Almuerzo destacado -->
+                    <div class="lunch-break mb-4 p-4 text-center" style="border: 2px solid #17a2b8; background: linear-gradient(135deg, #17a2b8, #138496); color: white; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                      <div class="time-badge mb-2" style="color: white; font-weight: bold; font-size: 14px;">13:15 - 14:15</div>
+                      <h5 class="mb-2" style="font-size: 18px;">🍽️ Almuerzo libre</h5>
+                      <p class="mb-0" style="font-size: 14px;">Receso para almorzar y networking</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #6c757d; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">14:15</span>
+                        <span class="badge badge-secondary" style="font-size: 11px;">Institucional</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Presentación Universidad Da Vinci</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">🏛️ Equipo institucional</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #ffc107; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">14:35</span>
+                        <span class="badge badge-warning" style="font-size: 11px;">Taller</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Arduino con Inteligencia Artificial</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Meiling Esteban</p>
+                    </div>
+
+                    <div class="event-card mb-3 p-3" style="border-left: 4px solid #28a745; background: #f8f9fa; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="time-badge badge badge-light" style="font-size: 13px; color: #495057;">14:55</span>
+                        <span class="badge badge-success" style="font-size: 11px;">Conferencia</span>
+                      </div>
+                      <h6 class="mb-2" style="font-size: 15px; line-height: 1.4; font-weight: 600;">Cómo funcionan los modelos de lenguaje (LLMs)</h6>
+                      <p class="mb-0 text-muted" style="font-size: 13px;">👤 Sergio Smith</p>
+                    </div>
+
+                    <!-- Call to action final -->
+                    <div class="mt-4 p-4 text-center" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15)); border: 2px solid #667eea; border-radius: 12px;">
+                      <h6 class="text-primary mb-2" style="font-size: 16px; font-weight: 600;">🎯 ¡Únete al evento!</h6>
+                      <p class="text-muted mb-3" style="font-size: 14px;">Evento completamente gratuito</p>
+                      <a href="https://ir.gt/flisolhuehue" target="_blank" class="btn btn-primary" style="font-size: 14px; padding: 10px 25px; border-radius: 25px;">
+                        📝 Registrarse ahora
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resumen rápido -->
+            <div class="row mt-3 pt-3" style="border-top: 1px solid #dee2e6;">
+              <div class="col-md-8">
+                <div class="d-flex flex-wrap">
+                  <span class="badge badge-light border mr-2 mb-1" style="font-size: 11px;">📅 17 Mayo 2026</span>
+                  <span class="badge badge-light border mr-2 mb-1" style="font-size: 11px;">🕐 08:00-15:25</span>
+                  <span class="badge badge-light border mr-2 mb-1" style="font-size: 11px;">📍 Universidad Da Vinci</span>
+                  <span class="badge badge-light border mr-2 mb-1" style="font-size: 11px;">💰 Gratuito</span>
+                </div>
+              </div>
+              <div class="col-md-4 text-md-right">
+                <a href="https://ir.gt/flisolhuehue" target="_blank" class="btn btn-outline-primary btn-sm">
+                  Registrarse →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-3 p-3" style="background-color: #f8f9fa; border-radius: 10px;">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <h5 class="text-primary mb-2" style="font-size: 16px;">📍 Universidad Da Vinci - Huehuetenango</h5>
+              <p class="mb-1 small"><strong>Dirección:</strong> 7, 7ª. Calle 13-70, El Terrero, Zona 4, Huehuetenango, Guatemala</p>
+              <div class="d-flex flex-wrap mt-2">
+                <a href="https://maps.app.goo.gl/XXyASrLz2Q625TTS6" target="_blank" class="btn btn-outline-primary btn-sm mr-2 mb-1" style="font-size: 11px;">
+                  <i class="fab fa-google"></i> Google Maps
+                </a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=15.3298971,-91.4853953" target="_blank" class="btn btn-outline-success btn-sm mr-2 mb-1" style="font-size: 11px;">
+                  🧭 Cómo llegar
+                </a>
+                <a href="https://waze.com/ul?ll=15.3298971,-91.4853953&navigate=yes" target="_blank" class="btn btn-outline-info btn-sm mr-2 mb-1" style="font-size: 11px;">
+                  🚗 Waze
+                </a>
+                <a href="https://maps.apple.com/?daddr=15.3298971,-91.4853953&q=Universidad%20Da%20Vinci%20Huehuetenango" target="_blank" class="btn btn-outline-dark btn-sm mb-1" style="font-size: 11px;">
+                  🍎 Apple Maps
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 text-md-right">
+              <p class="small text-muted mb-1">📍 Coordenadas: 15.3298971, -91.4853953</p>
+              <p class="small text-muted mb-2">Plus Code: 8GH7+XX Huehuetenango</p>
+              <a href="https://ir.gt/flisolhuehue" target="_blank" class="btn btn-primary">
+                📝 Registrarse Ahora
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="section-margin mb-5 pb-5"  ng-controller="eventSchedule">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">ASITI 2023</p>
+        <h2 class="primary-text">Cronograma de temas</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row">
+        <div class="col-xl-10 offset-xl-1">
+          <div class="scheduleTab">
+            <ul class="nav nav-tabs">
+              <li class="nav-item text-center">
+                <a data-toggle="tab" href="#day1">
+                  <h4>Dia 1</h4>
+                  <p>24 Septiembre, 2023</p>
+                </a>
+              </li>
+
+            </ul>
+          
+            <div class="tab-content">
+              <div id="day1" class="tab-pane active">
+                
+                <div class="schedule-card" ng-repeat="item in temas | orderBy: 'time'">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <div class="card-identity">
+                        <img ng-src="{{item.img}}" alt="">
+                        <h3>{{item.name}}</h3>
+                        <p>{{item.subject}}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-9 align-self-center">
+                      <div class="schedule-content">
+                        <p class="schedule-date" style="font-size: 1.5em;">{{item.time}}</p>
+                        <a class="schedule-title" href="#">
+                          <h3>{{item.subject}}</h3>
+                        </a>
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Schedule section End =================-->
+
+
+  <!--================ PriceTable section Start =================-->
+  <!-- <section class="section-padding bg-gray">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Choose Your Ticket</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="text-center card-priceTable">
+            <div class="priceTable-header">
+              <h3>Normal</h3>
+              <p>Attend only first day</p>
+              <h1 class="priceTable-price"><span>$</span> 45.00</h1>
+            </div>
+            <ul class="priceTable-list">
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Unlimited Entrance
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Comfortable Seat
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Paid Certificate
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> Day One Workshop
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> One Certificate
+              </li>
+            </ul>
+            <div class="priceTable-footer">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="text-center card-priceTable">
+            <div class="priceTable-header">
+              <h3>Advance</h3>
+              <p>Attend only first day</p>
+              <h1 class="priceTable-price"><span>$</span> 50.00</h1>
+            </div>
+            <ul class="priceTable-list">
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Unlimited Entrance
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Comfortable Seat
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Paid Certificate
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> Day One Workshop
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> One Certificate
+              </li>
+            </ul>
+            <div class="priceTable-footer">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="text-center card-priceTable">
+            <div class="priceTable-header">
+              <h3>Ultimate</h3>
+              <p>Attend only first day</p>
+              <h1 class="priceTable-price"><span>$</span> 60.00</h1>
+            </div>
+            <ul class="priceTable-list">
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Unlimited Entrance
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Comfortable Seat
+              </li>
+              <li>
+                <span class="position"><i class="ti-check"></i></span> Paid Certificate
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> Day One Workshop
+              </li>
+              <li>
+                <span class="negative"><i class="ti-close"></i></span> One Certificate
+              </li>
+            </ul>
+            <div class="priceTable-footer">
+              <a class="button" href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ PriceTable section End =================-->
+
+
+  <!--================ Contact and Sponsor section Start =================-->
+  <section class="section-padding--small sponsor-bg">
+    <div class="container">
+      <div class="section-intro text-center pb-80px">
+        <p class="section-intro__title">Información de Contacto</p>
+        <h2 class="primary-text">Canal de Contacto e Informes</h2>
+        <img src="img/home/section-style.png" alt="">
+        <p class="text-white mt-4">
+          � <a href="mailto:asitiguatemala@gmail.com" class="text-warning">asitiguatemala@gmail.com</a>
+        </p>
+        <p class="text-white mt-2">
+          🔗 Más información: <a href="https://www.facebook.com/FLISoLHuehuetenango" class="text-warning" target="_blank">Facebook FLISOL Huehuetenango</a>
+        </p>
+        <p class="text-white mt-2">
+          🌐 Sitio web: <a href="https://asiti.io.gt/" class="text-warning" target="_blank">ASITI</a>
+        </p>
+      </div>
+      
+      <div class="section-intro text-center pb-80px mt-5">
+        <h2 class="primary-text" style="color: #764ba2;">Patrocinadores</h2>
+        <div class="mt-4 p-4" style="background-color: rgba(255, 255, 255, 0.95); border-radius: 15px; max-width: 600px; margin: 0 auto; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+          <i class="fa fa-handshake" style="font-size: 48px; color: #667eea; margin-bottom: 20px;"></i>
+          <h4 style="color: #333; margin-bottom: 15px;">¿Quieres ser patrocinador?</h4>
+          <p style="color: #666; margin-bottom: 20px;">
+            Únete a este evento y apoya a la comunidad tecnológica de Guatemala.<br>
+            Contáctanos para conocer las oportunidades de patrocinio.
+          </p>
+          <a href="mailto:asitiguatemala@gmail.com?subject=Patrocinio FLISOL 2026" class="button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; display: inline-block; transition: all 0.3s;">
+            <i class="fa fa-envelope"></i> Contactar para Patrocinio
+          </a>
+        </div>
+      </div>
+
+      <!-- Patrocinadores para 2025 serán anunciados próximamente -->
+      
+      <!-- 
+      <div class="sponsor-wrapper sponsor-wrapper--small">
+        <h3 class="sponsor-title mb-5">Silver Sponsor</h3>
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor-sm-1.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor-sm-2.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 mb-3 mb-lg-0">
+            <div class="sponsor-single">
+              <img class="img-fluid" src="img/home/sponsor-sm-3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <!--================ Sponsor section End =================-->
+
+  <!--================ Gallery section Start =================-->
+  <!-- <section class="section-padding gallery-area gallery-bg">
+    <div class="container">
+      <div class="section-intro section-intro-white text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Event Plan Sponsors</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="row no-gutters">
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g1.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g1.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g2.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g2.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g3.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g3.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g4.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g4.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g5.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g5.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <a href="img/gallery/g6.png" class="img-gal">
+            <div class="single-imgs relative">				
+              <img class="card-img rounded-0" src="img/gallery/g6.png" alt="">		
+              <div class="overlay">
+                <div class="overlay-content">
+                  <div class="overlay-icon">
+                    <i class="ti-plus"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Gallery section End =================-->
+
+
+  <!--================ Blog section Start =================-->
+  <!-- <section class="section-margin">
+    <div class="container">
+      <div class="section-intro text-center pb-98px">
+        <p class="section-intro__title">Join the event</p>
+        <h2 class="primary-text">Why Join Ummet</h2>
+        <img src="img/home/section-style.png" alt="">
+      </div>
+
+      <div class="owl-theme owl-carousel blogCarousel pb-xl-1">
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog1.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog2.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog1.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-blog">
+          <img class="card-img" src="img/blog/blog2.png" alt="">
+          <div class="blog-body">
+            <a href="#">
+              <h3>Owls should be used to help abused children open <br class="d-none d-xl-block">
+                  up in therapy sessions, says charity boss</h3>
+            </a>
+            <ul class="blog-info">
+              <li><a href="#"><i class="ti-comments-smiley"></i> 03 Feb, 2019</a></li>
+              <li><a href="#"><i class="ti-time"></i> No Comment</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--================ Blog section End =================-->
+
+
+  <!-- ================ start footer Area ================= -->
+  <footer class="footer-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>FLISOL Huehuetenango</h6>
+            <p>
+              Festival Latinoamericano de Instalación de Software Libre
+            </p>
+          </div>
+        </div>
+        <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Navigation Links</h6>
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Feature</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>										
+            </div>							
+          </div>
+        </div>							 -->
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Boletín de noticias</h6>
+            <p>
+              Mantente informado sobre FLISOL y eventos de software libre
+            </p>								
+            <div id="mc_embed_signup">
+              
+              <!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+  <form action="https://asiti.us10.list-manage.com/subscribe/post?u=c869f545fe19e887db81fad37&amp;id=9075d8f281" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+    
+        <div class="input-group d-flex flex-row">
+    <input type="email" value="" placeholder="Correo electrónico"  name="EMAIL"onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo electrónico '"  class="required email" id="mce-EMAIL">
+    <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn bb-btn"><span class="lnr lnr-location"></span></button>
+  </div>
+    <div id="mce-responses" class="clear">
+      <div class="response" id="mce-error-response" style="display:none"></div>
+      <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c869f545fe19e887db81fad37_9075d8f281" tabindex="-1" value=""></div>
+      <!-- <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div> -->
+      
+      </div>
+  </form>
+  </div>
+  
+  <!--End mc_embed_signup-->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget mail-chimp">
+            <!-- <h6 class="mb-20">InstaFeed</h6>
+            <ul class="instafeed d-flex flex-wrap">
+              <li><img src="img/instagram/i1.jpg" alt=""></li>
+              <li><img src="img/instagram/i2.jpg" alt=""></li>
+              <li><img src="img/instagram/i3.jpg" alt=""></li>
+              <li><img src="img/instagram/i4.jpg" alt=""></li>
+              <li><img src="img/instagram/i5.jpg" alt=""></li>
+              <li><img src="img/instagram/i6.jpg" alt=""></li>
+              <li><img src="img/instagram/i7.jpg" alt=""></li>
+              <li><img src="img/instagram/i8.jpg" alt=""></li>
+            </ul> -->
+          </div>
+        </div>						
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <p class="col-lg-8 col-sm-12 footer-text m-0 text-center text-lg-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          <div class="col-lg-4 col-sm-12 footer-social text-center text-lg-right">
+            <a href="https://www.facebook.com/ASITIH" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/AsitiHuehue" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/asitihuehue7/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@asitihuehuetenango1524/streams" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/asitihuehue/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="http://t.me/asitihuehue" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ================ End footer Area ================= -->
+
+
+
+
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/Magnific-Popup/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/mail-script.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>	
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>	
+  <script src="js/main.js"></script>
+  <script src="js/controller.js?y"></script>
+
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v7.0'
+      });
+    };
+
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat"
+    attribution=setup_tool
+    page_id="493557597417834"
+theme_color="#0084ff"
+logged_in_greeting="Hola! envíanos un mensaje."
+logged_out_greeting="Hola! envíanos un mensaje.">
+  </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150062837-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150062837-1');
+</script>
+
+</body>
+</html>

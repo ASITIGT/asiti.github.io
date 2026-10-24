@@ -20,6 +20,7 @@ class HeaderManager {
       'index.html': 'index',
       '2023.html': '2023',
       '2025.html': '2025', 
+      'flisol2026.html': 'flisol2026',
       'contact.html': 'contact',
       'about.html': 'about',
       'blog.html': 'blog',
