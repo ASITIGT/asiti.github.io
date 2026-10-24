@@ -133,7 +133,7 @@ svg[viewBox="0 0 24 24"] {
 .bar__name { color: var(--text); }
 .bar__track { height: 10px; border-radius: 999px; background: var(--track); overflow: hidden; }
 .bar--group .bar__name { color: var(--muted); font-style: italic; }
-.bar--group .bar__fill { opacity: 0.55; }
+.bar--group .bar__fill { background: var(--muted); }
 .bar__fill { display: block; height: 100%; width: calc(var(--v) * 100%); min-width: 6px; border-radius: inherit; background: var(--bar); }
 .bar__num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--heading); }
 .bars__src { margin: 1.25rem 0 0; font-size: 0.8125rem; color: var(--muted); }

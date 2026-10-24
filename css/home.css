@@ -63,16 +63,16 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -0.02em; }
 
 .hero { background: #fff; }
 .hero__bg .blob { display: block; position: absolute; fill: var(--blue); }
-.hero__bg .blob--tl { width: clamp(160px, 22vw, 320px); top: -2px; left: -2px; opacity: 0.95; }
+.hero__bg .blob--tl { width: clamp(130px, 17vw, 250px); top: -2px; left: -2px; opacity: 0.95; }
 .hero__bg .blob--br { width: clamp(150px, 20vw, 300px); bottom: 4%; right: -2px; }
 .hero__bg .gear { display: block; position: absolute; width: clamp(320px, 42vw, 620px); right: -8%; top: 6%; fill: var(--sky); animation: spin 90s linear infinite; }
 .hero__bg .dots {
   display: block;
   position: absolute;
   width: 150px;
-  height: 120px;
-  left: 6%;
-  bottom: 12%;
+  height: 96px;
+  left: 44%;
+  top: 7%;
   background: radial-gradient(circle, var(--sky-2) 3px, transparent 3.5px) 0 0 / 24px 24px;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
