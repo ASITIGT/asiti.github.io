@@ -43,20 +43,20 @@
     <section class="hero" aria-labelledby="titulo">
       <div class="hero__bg" aria-hidden="true">
         <svg class="blob blob--tl" viewBox="0 0 400 400"><path d="M0 0h320c40 60 30 120-20 160s-120 30-150 90S120 380 40 400H0z"/></svg>
-        <svg class="blob blob--br" viewBox="0 0 400 400"><path d="M400 400H70c-30-70 10-130 70-150s110-40 120-110S320 20 400 0z"/></svg>
+        <svg class="blob blob--br" viewBox="0 0 400 400"><path d="M400 30c-90 6-150 60-140 140 8 62 70 80 58 140-8 40-40 60-30 70 30 14 80 4 112-10z"/></svg>
         <svg class="gear" viewBox="0 0 200 200"><path d="M93 10h14l4 22a70 70 0 0 1 17 7l18-13 10 10-13 18a70 70 0 0 1 7 17l22 4v14l-22 4a70 70 0 0 1-7 17l13 18-10 10-18-13a70 70 0 0 1-17 7l-4 22H93l-4-22a70 70 0 0 1-17-7l-18 13-10-10 13-18a70 70 0 0 1-7-17l-22-4V93l22-4a70 70 0 0 1 7-17L44 54l10-10 18 13a70 70 0 0 1 17-7zM100 62a38 38 0 1 0 0 76 38 38 0 0 0 0-76z" fill-rule="evenodd"/></svg>
         <span class="dots"></span>
       </div>
       <div class="wrap hero__inner">
         <div class="hero__copy">
-          <h1 id="titulo"><span class="h1__name">ASITI 2026</span> <span class="h1__line">¡Ayúdanos a decidir cómo será!</span></h1>
+          <h1 id="titulo"><span class="h1__name">ASITI 2026<svg class="sparks" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 8l9 7M4 21h12M6 34l9-7"/></svg></span> <span class="h1__line">¡Ayúdanos a <span class="swoosh">decidir cómo será</span>!</span></h1>
           <p class="hero__lede">Nuestro congreso anual de tecnología será a finales de noviembre. Si has estado en eventos de ASITI, queremos tu opinión para definir la modalidad, la fecha y los temas.</p>
           <ul class="facts">
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2.5 19h19"/></svg>Modalidad</li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13.5h2M12 13.5h2M16 13.5h.01M8 16.5h2M12 16.5h2"/></svg>Fecha</li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg>Temas</li>
           </ul>
-          <p class="question"><strong>¿Online o presencial</strong> en Huehuetenango?</p>
+          <p class="question"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c0-3.2 2.5-5.5 5.5-5.5s5.5 2.3 5.5 5.5"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 13.8c.5-.2 1-.3 1.5-.3 2.5 0 4.5 2 4.5 4.8"/></svg><span><strong>¿Online o presencial</strong> en Huehuetenango?</span></p>
           <div class="vote">
             <a class="btn btn--vote" href="https://ir.gt/asiti2026" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h16v7H4zM8 13l4-9 5 3-3 6M7 16.5h10"/></svg>
@@ -110,15 +110,11 @@
       <div class="wrap split">
         <div>
           <h2 id="comunidad-t">Una comunidad de todo el país</h2>
-          <p class="lead">Entre 2020 y 2026, quienes se registraron a eventos de ASITI llegaron desde 20 de los 22 departamentos de Guatemala y desde otros países de la región.</p>
-          <div class="stats">
-            <p><strong>700+</strong><span>inscripciones desde 2020</span></p>
-            <p><strong>20</strong><span>de 22 departamentos</span></p>
-            <p><strong>77</strong><span>registros desde otros países</span></p>
-          </div>
+          <p class="lead">Entre 2020 y 2026, quienes se registraron a eventos de ASITI llegaron desde <strong>20 de los 22 departamentos</strong> de Guatemala, y 77 registros vinieron de otros países de la región.</p>
+          <p class="lead">Huehuetenango es la casa de ASITI, pero la comunidad ya es de todo el país.</p>
         </div>
         <figure class="card bars">
-          <figcaption>Registros por departamento, 2020–2026</figcaption>
+          <figcaption>Registros por lugar de origen, 2020–2026</figcaption>
           <ol>
           <li><span class="bar__name">Huehuetenango</span><span class="bar__track"><span class="bar__fill" style="--v:1.000"></span></span><span class="bar__num">204</span></li>
           <li><span class="bar__name">Guatemala</span><span class="bar__track"><span class="bar__fill" style="--v:0.181"></span></span><span class="bar__num">37</span></li>
@@ -128,8 +124,10 @@
           <li><span class="bar__name">Chimaltenango</span><span class="bar__track"><span class="bar__fill" style="--v:0.054"></span></span><span class="bar__num">11</span></li>
           <li><span class="bar__name">Quiché</span><span class="bar__track"><span class="bar__fill" style="--v:0.049"></span></span><span class="bar__num">10</span></li>
           <li><span class="bar__name">Sololá</span><span class="bar__track"><span class="bar__fill" style="--v:0.044"></span></span><span class="bar__num">9</span></li>
+          <li class="bar--group"><span class="bar__name">Otros 12 departamentos</span><span class="bar__track"><span class="bar__fill" style="--v:0.216"></span></span><span class="bar__num">44</span></li>
+          <li class="bar--group"><span class="bar__name">Otros países</span><span class="bar__track"><span class="bar__fill" style="--v:0.377"></span></span><span class="bar__num">77</span></li>
           </ol>
-          <p class="bars__src">Fuente: formularios de inscripción y asistencia de ASITI, agrupados por departamento. No incluye datos personales.</p>
+          <p class="bars__src">Fuente: formularios de inscripción y asistencia de ASITI 2020–2026; solo registros con lugar de origen identificable, agrupados por departamento. No incluye datos personales.</p>
         </figure>
       </div>
     </section>
@@ -145,7 +143,7 @@
           <li><img src="img/people/camey.webp" alt="Daniel Camey" width="480" height="480" loading="lazy"><strong>Daniel Camey</strong><span>ICS/OT &amp; Cybersecurity</span></li>
           <li><img src="img/people/mario-garcia.webp" alt="Mario García" width="480" height="480" loading="lazy"><strong>Mario García</strong><span>Desarrollador de Software</span></li>
         </ul>
-        <p class="cta-line"><a href="https://ir.gt/asiti2026" target="_blank" rel="noopener">¿Quieres dar una charla en 2026? Propónla en el sondeo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+        <p class="cta-line"><a href="https://ir.gt/asiti2026" target="_blank" rel="noopener">¿Quieres dar una charla en 2026? Propónla en el&nbsp;sondeo&nbsp;<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
       </div>
     </section>
 

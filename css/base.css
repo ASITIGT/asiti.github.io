@@ -119,7 +119,7 @@ svg[viewBox="0 0 24 24"] {
 .datalist div:last-child { border-bottom: 0; }
 .datalist dt { font-weight: 600; color: var(--muted); font-size: 0.9375rem; }
 .datalist dd { margin: 0; font-weight: 500; color: var(--heading); }
-.tag { display: inline-block; margin-left: 0.4rem; padding: 0.1rem 0.55rem; border-radius: 999px; background: var(--tag-bg); color: var(--tag-text); font-size: 0.75rem; font-weight: 600; vertical-align: 0.1em; white-space: nowrap; }
+.tag { display: inline-block; margin-left: 0.4rem; padding: 0.05rem 0.55rem; border-radius: 999px; border: 1px dashed currentColor; background: var(--tag-bg); color: var(--tag-text); font-size: 0.75rem; font-weight: 600; vertical-align: 0.1em; white-space: nowrap; }
 
 .stats { display: flex; flex-wrap: wrap; gap: 1.5rem 2.75rem; margin-top: 2rem; }
 .stats p { margin: 0; }
@@ -132,6 +132,8 @@ svg[viewBox="0 0 24 24"] {
 .bars li { display: grid; grid-template-columns: 8.5rem 1fr 2.5rem; align-items: center; gap: 0.75rem; font-size: 0.9375rem; }
 .bar__name { color: var(--text); }
 .bar__track { height: 10px; border-radius: 999px; background: var(--track); overflow: hidden; }
+.bar--group .bar__name { color: var(--muted); font-style: italic; }
+.bar--group .bar__fill { opacity: 0.55; }
 .bar__fill { display: block; height: 100%; width: calc(var(--v) * 100%); min-width: 6px; border-radius: inherit; background: var(--bar); }
 .bar__num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--heading); }
 .bars__src { margin: 1.25rem 0 0; font-size: 0.8125rem; color: var(--muted); }
@@ -141,8 +143,7 @@ svg[viewBox="0 0 24 24"] {
 .people strong { display: block; color: var(--heading); font-family: var(--font-display); font-size: 1.0625rem; line-height: 1.25; }
 .people span { color: var(--muted); font-size: 0.9375rem; }
 .cta-line { margin-top: 2.25rem; font-weight: 600; }
-.cta-line a { display: inline-flex; align-items: center; gap: 0.5rem; }
-.cta-line svg { width: 1.2em; height: 1.2em; }
+.cta-line svg { display: inline-block; width: 1.2em; height: 1.2em; vertical-align: -0.25em; }
 
 .events { display: grid; gap: 0.75rem; margin: 2rem 0 0; padding: 0; list-style: none; }
 .events a { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.25rem; padding: 1.1rem 1.4rem; border-radius: var(--radius); background: var(--card); border: 1px solid var(--card-line); color: var(--text); text-decoration: none; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s, box-shadow 0.25s; }
@@ -180,6 +181,9 @@ svg[viewBox="0 0 24 24"] {
   .datalist div { grid-template-columns: 1fr; gap: 0.25rem; }
   .events a { grid-template-columns: auto 1fr; }
   .events a > svg { display: none; }
+  .people { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem 1rem; }
+  .people img { max-width: 150px; margin-inline: auto; }
+  .bars li { grid-template-columns: 6.5rem 1fr 2.25rem; }
   .btn--vote { width: 100%; justify-content: flex-start; }
 }
 
