@@ -28,7 +28,7 @@ Comunidad tecnológica local de Huehuetenango que organiza año con año un cong
 
 ## Operating Context
 
-- Evento vigente: ASITI 2026, congreso anual, finales de noviembre 2026; modalidad (online o presencial en Huehuetenango) y fecha (sáb 21 o 28) en sondeo vía https://ir.gt/asiti2026.
+- Evento vigente: **ASITI 2026, II Congreso Online de Tecnología y Seguridad Informática**, sábado 28 de noviembre de 2026, 9:00 a 14:00 hora de Guatemala, online y gratuito. Inscripción: https://forms.gle/7Xn9cBGBfVGmVxYY9. El sondeo de modalidad y fecha (https://ir.gt/asiti2026) ya cumplió su función y salió del sitio.
 - Eventos anteriores con página propia: ASITI 2023 (`2023.html`), ASITI 2025 (`2025.html`, online), FLISOL 2026 (`flisol2026.html`, 17 de mayo de 2026, Universidad Da Vinci).
 - Registro y sondeos con Google Forms; enlaces cortos con ir.gt; difusión por SMS, correo, Facebook y Telegram.
 - Contacto: asitiguatemala@gmail.com. Redes: facebook.com/ASITIH, x.com/AsitiHuehue, instagram.com/asitihuehue7, YouTube @asitihuehuetenango1524, LinkedIn asitihuehue, t.me/asitihuehue.
@@ -38,7 +38,7 @@ Comunidad tecnológica local de Huehuetenango que organiza año con año un cong
 - Sitio estático (HTML, CSS, JS) publicado con GitHub Pages en el dominio asiti.io.gt; repo ASITIGT/asiti.github.io.
 - El menú se comparte entre páginas con `includes/header.html` + `js/shared-header.js`.
 - Sin datos personales en el repo: los CSV de asistentes están en `.gitignore`.
-- Sin decidir todavía: fecha final, modalidad, sede y agenda de ASITI 2026.
+- Fecha, modalidad y programa de ASITI 2026 ya están decididos y publicados; el cartel sigue abierto a más ponentes.
 
 ## Brand Commitments
 
@@ -56,7 +56,7 @@ Comunidad tecnológica local de Huehuetenango que organiza año con año un cong
 
 ## Product Principles
 
-1. La acción del momento (sondeo, inscripción) siempre a un toque, sobre todo en celular.
+1. La acción del momento (hoy, la inscripción) siempre a un toque, sobre todo en celular.
 2. Rápido en conexiones móviles de Guatemala: nada pesado que no aporte.
 3. Legible para todos: texto con buen contraste sobre cualquier fondo.
 4. La trayectoria se demuestra con eventos reales, no con promesas.

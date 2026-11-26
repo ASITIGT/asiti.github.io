@@ -128,12 +128,11 @@ components:
     textColor: "{colors.navy}"
     rounded: "{rounded.pill}"
     padding: "0.05rem 0.55rem"
-  question-panel:
-    backgroundColor: "{colors.sky}"
-    textColor: "{colors.navy}"
-    typography: "{typography.title}"
-    rounded: "{rounded.panel}"
-    padding: "0.85rem 1.25rem"
+  agenda-row:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.card}"
+    padding: "1.1rem 1.4rem"
   name-box:
     backgroundColor: "{colors.blue-ink}"
     textColor: "{colors.white}"
@@ -246,7 +245,7 @@ Un azul de marca con su versión de tinta para texto, un azul marino para la voz
 
 Columna centrada de hasta 1180px con margen lateral `clamp(16px, 4vw, 40px)`. Secciones con relleno vertical `clamp(4rem, 9vw, 7rem)` que alternan blanco y `sky`. El patrón de contenido es el split: dos columnas `1.05fr 1fr` desde 900px (texto a la izquierda, tarjeta o gráfica a la derecha), una sola columna debajo, con espacio `clamp(2rem, 5vw, 4rem)`.
 
-**Composición del hero.** Fondo blanco con mancha azul en la esquina superior izquierda (clamp(160px, 22vw, 320px), opacidad 0.95) y otra en el borde derecho inferior; el engrane del logo en `sky` (clamp(320px, 42vw, 620px)) asomando a la derecha; una retícula de puntos `sky-2` (círculos de 3px cada 24px) abajo a la izquierda. A la izquierda, el copy (máx. 760px): caja azul con el nombre del evento y chispas a su derecha; línea en azul marino con subrayado curvo azul bajo las palabras clave; lede; fichas; panel de pregunta; botón de voto con nota de tiempo. A la derecha, desde 1040px, la red de ponentes: columnas `1.3fr 1fr`, una foto central grande y cuatro alrededor unidas por líneas `sky-2` de 3px, con dos puntos sueltos (uno azul, uno `sky-2`), como los nodos del logo. Bajo 700px las manchas se reducen (140px y 96px), los puntos suben a la esquina superior derecha y las chispas se ocultan.
+**Composición del hero.** Fondo blanco con mancha azul en la esquina superior izquierda (clamp(160px, 22vw, 320px), opacidad 0.95) y otra en el borde derecho inferior; el engrane del logo en `sky` (clamp(320px, 42vw, 620px)) asomando a la derecha; una retícula de puntos `sky-2` (círculos de 3px cada 24px) abajo a la izquierda. A la izquierda, el copy (máx. 760px): caja azul con el nombre del evento y chispas a su derecha; línea en azul marino con subrayado curvo azul bajo una palabra clave que nunca parte en dos; lede; fichas de fecha, horario y modalidad; botón de inscripción con nota de tiempo. A la derecha, desde 1040px, la red de ponentes: columnas `1.3fr 1fr`, una foto central grande y cuatro alrededor unidas por líneas `sky-2` de 3px, con dos puntos sueltos (uno azul, uno `sky-2`), como los nodos del logo. Bajo 700px las manchas se reducen (140px y 96px), los puntos suben a la esquina superior derecha y las chispas se ocultan.
 
 La navegación es fija arriba (68px), blanca translúcida con desenfoque; los enlaces se ocultan bajo 860px y queda el logo (128px) con el botón pequeño de votar. La acción principal siempre está a un toque. Los anclajes compensan la barra con `scroll-padding-top: 84px`.
 
@@ -279,12 +278,12 @@ Sólidos, generosos y con brillo azul; el botón es la acción del momento.
 - **Primary:** fondo azul tinta, texto blanco Poppins 600 1rem, relleno 0.75rem 1.5rem, ícono a 1.25em con 0.75rem de separación.
 - **Hover / Focus:** fondo azul profundo y sube 2px con `cubic-bezier(0.16, 1, 0.3, 1)` en 0.2s; `:active` vuelve a 0. Foco global: contorno de 3px azul ASITI con separación de 3px.
 - **Small:** 42px de alto, relleno 0.55rem 1.1rem, 0.9375rem; en la navegación y el pie.
-- **Voto:** 64px de alto, 700 a 1.375rem, ícono de urna de 34px separado por una línea vertical de 1.5px, y una línea pequeña (0.8125rem, 500) encima del enlace corto. A todo el ancho bajo 520px.
+- **Acción principal** (clase `btn--vote`): 64px de alto, 700 a 1.375rem, ícono de 34px separado por una línea vertical de 1.5px, y una línea pequeña (0.8125rem, 500) encima de la llamada. A todo el ancho bajo 520px.
 
 ### Chips
 - **Fichas:** píldora `sky` con texto marino 600 y un ícono blanco dentro de un círculo azul tinta de 34px a la izquierda.
 - **Temas:** píldora `sky` con texto marino 500 a 0.9375rem, sin borde.
-- **Etiqueta "por decidir":** píldora blanca con borde punteado de 1px en el color del texto (marino), 0.75rem 600, junto al dato pendiente.
+- **Etiqueta "por decidir":** píldora blanca con borde punteado de 1px en el color del texto (marino), 0.75rem 600, junto a un dato pendiente. Sin uso mientras no haya datos sin confirmar.
 
 ### Cards / Containers
 - **Corner Style:** 22px.
@@ -301,8 +300,8 @@ Sólidos, generosos y con brillo azul; el botón es la acción del momento.
 ### Navigation
 Barra fija de 68px, blanca al 88% con `saturate(1.4) blur(10px)` y línea inferior marina al 8%. Logo azul a 150px a la izquierda, enlaces marinos 500 a 0.9375rem que pasan a azul tinta en hover, y el botón pequeño de votar a la derecha. Bajo 860px solo quedan logo y botón.
 
-### Pregunta del sondeo
-Panel `sky` de 18px de radio con un ícono de personas de 34px en marino, pregunta en Title marino y las palabras de la decisión en azul tinta.
+### Fila del programa
+Fila tarjeta de 22px en cuadrícula `4.75rem 76px 1fr`: hora en Poppins 700 1.25rem azul tinta con cifras tabulares, foto circular de 76px con borde `sky` de 3px (o círculo `sky` con iniciales o el engrane cuando no hay foto), título de la charla en Poppins 700 1.0625rem marino, ponente en 600 `text-2` y cargo con país en caption `muted`. Bajo 640px la hora pasa a su propia línea y la foto baja a 60px.
 
 ### Gráfica de barras
 Tarjeta con título 600 marino, filas de nombre (8.5rem), pista `sky-2` de 10px en píldora con relleno azul ASITI proporcional (mínimo 6px) y número tabular a la derecha; fuente en caption `muted` al pie.
